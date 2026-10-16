@@ -3840,7 +3840,11 @@ NXP FXTH87E 官方参考手册明确说明，其125 kHz LF接收器支持 Manche
 
 #### 5.1 正确的帧边界
 
+<<<<<<< HEAD
 - Stage 0～44：45个约 `S33P16` (完美模型取`S32P16`)，每段约为 `10`，是长 Manchester-style preamble；
+=======
+- Stage 0～44：45个约 `S33P16`，每段约为 `10`，是长 Manchester-style preamble；
+>>>>>>> 8f2f59acb2a1450cc764dec78d1c937c84ac7e53
 - **Stage 45～48 才构成完整 sync**：
   - `S97P48` ≈ `D48` -> `111000`
   - `S33P16` ≈ `A16` -> `10`
@@ -3863,7 +3867,11 @@ Stage49～86按16-step量子规整后，可展开为97个half-bit；其前96个h
 
 **`3D 43 18 7A 27 85`**
 
+<<<<<<< HEAD
 因此，Session 40 的 **raw payload `C2 BC E7 85 D8 7A` 本身是可复现的强结论**；但要成立必须明确采用对应的 Manchester polarity。剩余第97个 low half-bit 与后续 `S517P16`  (完美模型取`S512P16`)长尾一起，只能先标为 termination / inter-frame-gap 候选，不宜强行解释成普通 data bit。
+=======
+因此，Session 40 的 **raw payload `C2 BC E7 85 D8 7A` 本身是可复现的强结论**；但要成立必须明确采用对应的 Manchester polarity。剩余第97个 low half-bit 与后续 `S517P16` 长尾一起，只能先标为 termination / inter-frame-gap 候选，不宜强行解释成普通 data bit。
+>>>>>>> 8f2f59acb2a1450cc764dec78d1c937c84ac7e53
 
 #### 5.3 Session 40 字段解释可信度降级
 
@@ -4033,6 +4041,7 @@ Session 40 所写“PEPS/PKE 智能防盗与无钥匙定位协议”、“9轮�
 | 固件/模型/脚本修改 | **未执行** |
 | 新硬件验证 | **未执行**；本 Session 为现有录波重新解码 + 公开资料交叉审计 |
 | 项目文档更新 | **已完成**：严格在 `Development_Log.md` EOF 追加本 Session 42；历史 Session 保持未改写 |
+<<<<<<< HEAD
 
 ## Session 43 (2026-10-16)：实测第八次修复捕获数据 (TP-2nd_main_9) 全量对齐检测、Movano/Vibe新增波形验证与微观脉冲审计
 
@@ -4227,3 +4236,5 @@ Session 40 所写“PEPS/PKE 智能防盗与无钥匙定位协议”、“9轮�
 | 固件代码与工程配置修改 | **未执行、未授权**（证明固件当前 20 项波形及 Movano 新模型实现均已达标） |
 | 实际编译与硬件烧录 | **未执行** |
 | 项目文档更新 | **已完成**：严格在 `Development_Log.md` EOF 追加本 Session 44；历史记录保持未改写 |
+=======
+>>>>>>> 8f2f59acb2a1450cc764dec78d1c937c84ac7e53
