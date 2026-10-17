@@ -71,15 +71,15 @@ main.o:
     .text                offset:0x8        size:0x1
     code                 offset:0x8e3      size:0x4f (79)
     code                 offset:0x882      size:0x61 (97)
-    code                 offset:0x5f6      size:0x128 (296)
-    code                 offset:0x31a      size:0x198 (408)
+    code                 offset:0x5e9      size:0x128 (296)
+    code                 offset:0x30d      size:0x198 (408)
     code                 offset:0x800      size:0x82 (130)
-    code                 offset:0x71e      size:0xb5 (181)
+    code                 offset:0x711      size:0xb5 (181)
     code                 offset:0x932      size:0x3f (63)
-    code                 offset:0x7d3      size:0x14 (20)
+    code                 offset:0x7c6      size:0x14 (20)
 
 waveform_perfect_model_gemini.o:
-    .debug_line          offset:0x1af3     size:0x1595 (5525)
+    .debug_line          offset:0x1af3     size:0x1563 (5475)
     .debug_info          offset:0x6b5      size:0x25f (607)
     .debug_abbrev        offset:0x29       size:0x29 (41)
     .debug_ranges        offset:0x120      size:0x88 (136)
@@ -101,25 +101,25 @@ waveform_perfect_model_gemini.o:
     uninit               offset:0x2000005f size:0x1
     uninit               offset:0x20000060 size:0x1
     uninit               offset:0x20000061 size:0x1
-    code                 offset:0xa76      size:0xa (10)
+    code                 offset:0xa66      size:0xa (10)
+    code                 offset:0x7ee      size:0x10 (16)
     code                 offset:0x9d2      size:0x10 (16)
+    code                 offset:0xa1f      size:0xd (13)
+    code                 offset:0xa02      size:0xf (15)
     code                 offset:0x9e2      size:0x10 (16)
-    code                 offset:0xa2f      size:0xd (13)
-    code                 offset:0xa12      size:0xf (15)
+    code                 offset:0xa45      size:0xb (11)
     code                 offset:0x9f2      size:0x10 (16)
-    code                 offset:0xa55      size:0xb (11)
-    code                 offset:0xa02      size:0x10 (16)
-    code                 offset:0x7e7      size:0x14 (20)
-    code                 offset:0xa3c      size:0xd (13)
-    code                 offset:0xa60      size:0xb (11)
+    code                 offset:0x7da      size:0x14 (20)
+    code                 offset:0xa2c      size:0xd (13)
+    code                 offset:0xa50      size:0xb (11)
     code                 offset:0x9c0      size:0x12 (18)
-    code                 offset:0xa6b      size:0xb (11)
-    code                 offset:0xa21      size:0xe (14)
-    code                 offset:0x4b2      size:0x144 (324)
-    code                 offset:0x9        size:0x311 (785)
+    code                 offset:0xa5b      size:0xb (11)
+    code                 offset:0xa11      size:0xe (14)
+    code                 offset:0x4a5      size:0x144 (324)
+    code                 offset:0x9        size:0x304 (772)
 
 NY8B062F.a:
-    .debug_line          offset:0x3088     size:0x576 (1398)
+    .debug_line          offset:0x3056     size:0x576 (1398)
     .debug_info          offset:0x914      size:0x2d (45)
     .debug_abbrev        offset:0x52       size:0xf (15)
     .debug_ranges        offset:0x1a8      size:0x284 (644)
@@ -288,19 +288,19 @@ NY8B062F.a:
 libsdcc_bankram.a:
 
 bank2_8b.a:
-    .debug_line          offset:0x35ff     size:0x4e (78)
+    .debug_line          offset:0x35cc     size:0x4e (78)
     .debug_info          offset:0x941      size:0x2e (46)
     .debug_abbrev        offset:0x61       size:0xf (15)
     .debug_ranges        offset:0x42c      size:0x8
     .debug_aranges       offset:0x444      size:0x10 (16)
     code                 offset:0x9ad      size:0x13 (19)
-    .debug_line          offset:0x364d     size:0x46 (70)
+    .debug_line          offset:0x361b     size:0x46 (70)
     .debug_info          offset:0x96f      size:0x2e (46)
     .debug_abbrev        offset:0x71       size:0xf (15)
     .debug_ranges        offset:0x434      size:0x8
     .debug_aranges       offset:0x454      size:0x10 (16)
-    code                 offset:0xa49      size:0xc (12)
-    .debug_line          offset:0x3693     size:0x3c (60)
+    code                 offset:0xa39      size:0xc (12)
+    .debug_line          offset:0x3661     size:0x3c (60)
     .debug_info          offset:0x99d      size:0x2b (43)
     .debug_abbrev        offset:0x80       size:0xf (15)
     .debug_ranges        offset:0x43c      size:0x8
@@ -688,8 +688,8 @@ ___STK12                  no used
 ___uchar2fs               no used
 ___uint2fs                no used
 ___ulong2fs               no used
-__checksum                0x7e4 (2020)
-__CHECKSUM_ADDR__         0x7e4 (2020)
+__checksum                0x7da (2010)
+__CHECKSUM_ADDR__         0x7da (2010)
 __codeptrget1             0x0
 __divschar                no used
 __divsint                 no used
@@ -708,8 +708,8 @@ __gptrget1                0x0
 __gptrget2                no used
 __gptrget3                no used
 __gptrget4                no used
-__gptrput                 0x7ad (1965)
-__gptrput1                0x7ad (1965)
+__gptrput                 0x7a3 (1955)
+__gptrput1                0x7a3 (1955)
 __gptrput2                no used
 __gptrput3                no used
 __gptrput4                no used
@@ -779,8 +779,8 @@ _INTFbits                 0x2000000f
 _IOSTA                    0x20800005
 _IOSTB                    0x20800006
 _IRCR                     0x21000006
-_isr                      0x683 (1667)
-_main                     0x62d (1581)
+_isr                      0x689 (1673)
+_main                     0x633 (1587)
 _multi_16b                no used
 _multi_8b                 no used
 _OSCCR                    0x2100000f
@@ -825,7 +825,7 @@ _TMR2                     0x21000009
 _TMR3                     0x21000010
 _TMRH                     0x20000019
 _TMRHbits                 0x20000019
-_waveform_model_load_c10_stage 0x352 (850)
+_waveform_model_load_c10_stage 0x348 (840)
 _waveform_model_load_stage 0x9
 PSAVE                     0x2000007f
 SSAVE                     0x2000007e
