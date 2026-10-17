@@ -574,7 +574,7 @@ Project originally treated two power sources identically (9V battery and 12V DC 
 | **ADC DMA chain** | ADC trigger (50ms flag) → DMA conversion → `ADCConversionDone` → `get_Voltage()` |
 | **Power FSM** | `powerOnandOff()` checks `powerOnFlag` vs `lastPowerOnFlag` delta, drives GPIO |
 
-### Session #8 Key Takeaways
+## Session #8 Key Takeaways
 
 | Takeaway | Detail |
 |----------|--------|
@@ -598,7 +598,7 @@ Project originally treated two power sources identically (9V battery and 12V DC 
 
 ---
 
-### Session #9 — HW Optimization + Bug Fix: ADC_3V3 GPIO + KEY_IM_L Power-On
+## Session #9 — HW Optimization + Bug Fix: ADC_3V3 GPIO + KEY_IM_L Power-On
 
 **Date:** 2026-07-16
 **Type:** Analysis & Design (No code execution)
@@ -694,7 +694,7 @@ Short-press KEY_IM → read_my_key() return 1 → My_keypad_get_key() return 1
 
 ---
 
-### Session #10 — ST7735 LCD 刷新优化与 SPI1 TX DMA 分层实施
+## Session #10 — ST7735 LCD 刷新优化与 SPI1 TX DMA 分层实施
 
 **日期：** 2026-09-11  
 **类型：** 已授权代码实施（未编译、未烧录）  
@@ -738,7 +738,7 @@ Short-press KEY_IM → read_my_key() return 1 → My_keypad_get_key() return 1
 
 ---
 
-### Session #11 — 双主控 LCD 切换残留现象记录
+## Session #11 — 双主控 LCD 切换残留现象记录
 
 **日期：** 2026-09-13  
 **类型：** 实板现象记录（用户检查确认为硬件问题）  
@@ -800,7 +800,7 @@ Short-press KEY_IM → read_my_key() return 1 → My_keypad_get_key() return 1
 
 ---
 
-### Session #12 — 页面跳转去重与 TK1300G3 有界定时读取优化
+## Session #12 — 页面跳转去重与 TK1300G3 有界定时读取优化
 
 **日期**：2026-09-14  
 **类型**：已授权代码实施、静态复核与下次 Session 交接准备  
@@ -903,7 +903,7 @@ flowchart TD
 
 ---
 
-### Session #13 — PRS 压力采集失败占位符修复
+## Session #13 — PRS 压力采集失败占位符修复
 
 **日期**：2026-09-14  
 **类型**：已授权代码实施、规格切换与静态复核  
@@ -984,7 +984,7 @@ flowchart TD
 
 ---
 
-### Session #14 — LVGL 页面任务治理与 TP PWM 退出清理
+## Session #14 — LVGL 页面任务治理与 TP PWM 退出清理
 
 **日期**：2026-09-15  
 **类型**：已授权代码实施、规格切换、页面生命周期修复与静态复核  
@@ -1059,7 +1059,7 @@ flowchart TD
 
 ---
 
-### Session #15 — Session #14 补充：ADC 采样数据流优化
+## Session #15 — Session #14 补充：ADC 采样数据流优化
 
 **日期**：2026-09-15  
 **类型**：本次会话遗漏内容补充、已授权代码实施与静态复核  
@@ -1123,7 +1123,7 @@ flowchart TD
 
 ---
 
-### Session #16 — TP PWM 的 ESC 退出与 MODE 双主控切换清理补全
+## Session #16 — TP PWM 的 ESC 退出与 MODE 双主控切换清理补全
 
 **日期**：2026-09-15  
 **类型**：已授权代码实施、规格修订与静态复核  
@@ -1190,7 +1190,7 @@ flowchart TD
 
 ---
 
-### Session #17 — PRS 与 TP 页面焦点组初始化简化
+## Session #17 — PRS 与 TP 页面焦点组初始化简化
 
 **日期**：2026-09-15  
 **类型**：已授权代码实施、规格切换与静态复核  
@@ -3366,63 +3366,98 @@ D:\work\PY32F403\PY32F403_Firmware_V1.4.4\Projects\PY32F403-STK\Example\SPI\V504
 - 获得硬件测试授权后使用示波器观测 GM 载波与 FORD 调制载波的 5 秒时序及波形输出；
 - 本次日志收尾仅更新 `Development_Log.md`；未修改 `Project_Architecture.md`、`File_Structure.md`。
 
----
 
-### Session #50 — TK1300G3气压自动检测服务解耦实现、胎压表页面流转全链路接入与常压测试模式校准
+
+### Session #49  — TK1300G3气压自动检测服务解耦实现、胎压表页面流转全链路接入与常压测试模式校准
 
 **日期**：2026-10-15  
 **类型**：已授权代码实施、气压检测服务解耦与自治状态机移植、UI自动跃迁对接、常压测试验证  
 **当前规格**：`V50448-TIRE-GAUGE-TK1300G3-PRESSURE-DETECT-20261015`，Revision 1  
-**审查基准**：用户指令依据 `Frame_Guidance.txt` 实施，参考参考项目 `D:\work\TP\8BE64A_TPA01_notEncapsulation`（`main.c:459-558`）与 `50448_Pro流程界面规划.md` 规范，在 `MDK-ARM/TK1300G3.c/.h` 中封装自治气压检测服务（含基线标定、10 kPa 死区防噪、连续稳定判别与拔脱识别），并在 `Middlewares/custom/pages/pages_tire_gauge.c` 中完成自动跃迁与真实选轮保存接入；随后响应现场实板测试需求，暂时将基准压强置 0，验证常压检测逻辑  
+**审查基准**：用户指令依据 `Frame_Guidance.txt` 实施，参考参考项目 `D:\work\TP\8BE64A_TPA01_notEncapsulation`（`main.c:459-558`）与 `50448_Pro流程界面规划.md` 规范，在 `MDK-ARM/TK1300G3.c/.h` 中封装自治气压检测服务（含基线标定、10 kPa 死区防噪、连续稳定判别与拔脱识别），并在 `Middlewares/custom/pages/pages_tire_gauge.c` 中完成自动跃迁与真实选轮保存接入；随后响应现场实板测试需求，暂时将基准压强置 0，验证常压检测逻辑  
 **关联历史规格**：
-  - 前置任务快照：`History_Guidance/2026-10-15/Frame_Guidance_2026-10-15_053018_v50448-tp-pwm-decoupling-extract_r02.txt`  
-**验证边界**：完成静态 Allman 代码风格、零非 ASCII 字符、花括号平衡性及分层解耦审计；用户在实机上完成常压检测测试，确认硬件通信与状态机流转正常。
+
+- 前置任务快照：`History_Guidance/2026-10-15/Frame_Guidance_2026-10-15_053018_v50448-tp-pwm-decoupling-extract_r02.txt`  
+    **验证边界**：完成静态 Allman 代码风格、零非 ASCII 字符、花括号平衡性及分层解耦审计；用户在实机上完成常压检测测试，确认硬件通信与状态机流转正常。
+    
 
 #### 1. 背景与目标
 
-- 原 `pages_prs.c` 依赖人工在车轮按钮按 OK 触发单次阻塞读取，无自动气门嘴感应、无基线去皮、无死区过滤、无离胎脱离保持；
-- `50448_Pro流程界面规划.md` 明确要求 `pages_tire_gauge.c` 支持“即连即测、自由读数、稳定锁定、拔脱保持、按需选轮保存”；
+- 原 `pages_prs.c` 依赖人工在车轮按钮按 OK 触发单次阻塞读取，无自动气门嘴感应、无基线去皮、无死区过滤、无离胎脱离保持；
+    
+- `50448_Pro流程界面规划.md` 明确要求 `pages_tire_gauge.c` 支持“即连即测、自由读数、稳定锁定、拔脱保持、按需选轮保存”；
+    
 - G0 界面不能包含具体底层硬件业务，仅通过布尔标志启动和关闭检测；
-- 参考项目 `8BE64A_TPA01_notEncapsulation` 的连续自动检测状态机，将其移植至驱动层，实现硬件逻辑与 UI 层彻底解耦。
+    
+- 参考项目 `8BE64A_TPA01_notEncapsulation` 的连续自动检测状态机，将其移植至驱动层，实现硬件逻辑与 UI 层彻底解耦。
+    
 
 #### 2. 实施方案与结果
 
-- **第一阶段：TK1300G3 自治气压检测服务（`MDK-ARM/TK1300G3.c/.h`）**：
-  - 定义 `pressure_detect_status_t` 状态机（IDLE、DISCONNECTED、TRACKING、LOCKED、REMOVED）；
-  - 移植 10 kPa 滞环死区过滤（`PRESSURE_HYSTERESIS_KPA = 10`），有效隔离探头浮空抖动与环境噪声；
-  - 实现连续 5 次（约 500 ms）稳定读数锁定（`LOCKED`）及拔脱识别（`REMOVED`）；
-  - 导出 `pressure_detect_enable`、`pressure_detect_process`、`pressure_detect_get_status`、`pressure_detect_get_kpa` 等高层正交 API，与 UI 彻底解耦；
-  - 响应现场常温常压测试需求，暂时将 `s_baseline_kpa` 锁定为 0，使自然开放大气压（约 100 kPa / 14.6 PSI）能直接触发检测并实时回显于屏幕。
-- **第二阶段：胎压表页面接入与动态单位换算（`Middlewares/custom/pages/pages_tire_gauge.c`）**：
-  - 引入 `TK1300G3.h`；
-  - 彻底删除原有的“G0 按 OK 强制变 G1”、“按 DOWN 强制进 G4 错误或 G1 Hold”等模拟测试代码，恢复标准按键交互（G0 忽略 Enter；非保存状态下 UP/DOWN 切换单位）；
-  - 扩充 `gauge_wheel_record_t` 保存真实物理表压 `uint16_t pressure_kpa` 作为单权威事实源；
-  - 新增 `gauge_format_compact_pressure` 与 `gauge_format_full_pressure`，实现 4 种单位（PSI、BAR、kPa、kg/cm²）基于原始 kPa 的动态高精度格式化；
-  - 在 `tire_gauge_page_open()` 中调用 `pressure_detect_enable(true)` 并启动 100 ms 检测调度任务 `s_gauge_detect_task`；
-  - 在 `gauge_page_cleanup()` 中调用 `pressure_detect_enable(false)` 并注销全部相关任务；
-  - 100 ms 任务自动调度状态机：G0 测到压力自动跳 G1，G1 拔脱自动进 G1_HOLD（3 秒倒计时），重新插回自动切回 G1 实时读数，超时未存自动回 G0，按 OK 进入 G2 选轮写入 `s_wheel_records`。
+- **第一阶段：TK1300G3 自治气压检测服务（**`**MDK-ARM/TK1300G3.c/.h**`**）**：
+    
+    - 定义 `pressure_detect_status_t` 状态机（IDLE、DISCONNECTED、TRACKING、LOCKED、REMOVED）；
+        
+    - 移植 10 kPa 滞环死区过滤（`PRESSURE_HYSTERESIS_KPA = 10`），有效隔离探头浮空抖动与环境噪声；
+        
+    - 实现连续 5 次（约 500 ms）稳定读数锁定（`LOCKED`）及拔脱识别（`REMOVED`）；
+        
+    - 导出 `pressure_detect_enable`、`pressure_detect_process`、`pressure_detect_get_status`、`pressure_detect_get_kpa` 等高层正交 API，与 UI 彻底解耦；
+        
+    - 响应现场常温常压测试需求，暂时将 `s_baseline_kpa` 锁定为 0，使自然开放大气压（约 100 kPa / 14.6 PSI）能直接触发检测并实时回显于屏幕。
+        
+- **第二阶段：胎压表页面接入与动态单位换算（**`**Middlewares/custom/pages/pages_tire_gauge.c**`**）**：
+    
+    - 引入 `TK1300G3.h`；
+        
+    - 彻底删除原有的“G0 按 OK 强制变 G1”、“按 DOWN 强制进 G4 错误或 G1 Hold”等模拟测试代码，恢复标准按键交互（G0 忽略 Enter；非保存状态下 UP/DOWN 切换单位）；
+        
+    - 扩充 `gauge_wheel_record_t` 保存真实物理表压 `uint16_t pressure_kpa` 作为单权威事实源；
+        
+    - 新增 `gauge_format_compact_pressure` 与 `gauge_format_full_pressure`，实现 4 种单位（PSI、BAR、kPa、kg/cm²）基于原始 kPa 的动态高精度格式化；
+        
+    - 在 `tire_gauge_page_open()` 中调用 `pressure_detect_enable(true)` 并启动 100 ms 检测调度任务 `s_gauge_detect_task`；
+        
+    - 在 `gauge_page_cleanup()` 中调用 `pressure_detect_enable(false)` 并注销全部相关任务；
+        
+    - 100 ms 任务自动调度状态机：G0 测到压力自动跳 G1，G1 拔脱自动进 G1_HOLD（3 秒倒计时），重新插回自动切回 G1 实时读数，超时未存自动回 G0，按 OK 进入 G2 选轮写入 `s_wheel_records`。
+        
 
 #### 3. 修改文件
 
 - `Frame_Guidance.txt`：归档前置任务快照并原地写入本次新任务规格。
+    
 - `MDK-ARM/TK1300G3.h`：导出检测状态枚举、关键常数与 8 项自治服务接口。
+    
 - `MDK-ARM/TK1300G3.c`：实现状态机驱动收拢、死区过滤、稳定锁定及常压测试模式校准。
+    
 - `Middlewares/custom/pages/pages_tire_gauge.c`：接入检测服务、多单位动态格式化、全自动状态跃迁与真实选轮保存。
+    
 - `Development_Log.md`：在文件末尾追加本 Session 记录。
+    
 
 #### 4. 已完成验证
 
 - **静态规范**：Allman 花括号风格 100% 独立成行（0 处违规），修改代码非 ASCII 字符计数为 0，注释纯英文；
+    
 - **花括号平衡度**：`TK1300G3.h`（4/4）、`TK1300G3.c`（88/88）、`pages_tire_gauge.c`（191/191），开闭花括号完全平衡；
-- **分层解耦审计**：全局 grep 确认 `pages_tire_gauge.c` 中无直接操作 TIM10、GPIO 或位定时延时的代码，UI 页面仅通过 `pressure_detect_*` 接口获取数据与控制使能；
+    
+- **分层解耦审计**：全局 grep 确认 `pages_tire_gauge.c` 中无直接操作 TIM10、GPIO 或位定时延时的代码，UI 页面仅通过 `pressure_detect_*` 接口获取数据与控制使能；
+    
 - **文件状态与哈希**：
-  - `MDK-ARM/TK1300G3.h`：6,090 字节（SHA-256: `62C837FF210F58FB5CFAD8DC8B4AF9B9EC521A25479E593ECDDB1D68E5EF5A17`）
-  - `MDK-ARM/TK1300G3.c`：17,829 字节（SHA-256: `A84F99F45EBCB47087E0E6E4FCC4D24E75372C144EB3DD90E87D9DBE93EB45A4`）
-  - `Middlewares/custom/pages/pages_tire_gauge.c`：46,427 字节（SHA-256: `EE445DEF83FB1831D47EA014BA9962FCA02F8048749A28AAFD545E924222E72D`）
+    
+    - `MDK-ARM/TK1300G3.h`：6,090 字节（SHA-256: `62C837FF210F58FB5CFAD8DC8B4AF9B9EC521A25479E593ECDDB1D68E5EF5A17`）
+        
+    - `MDK-ARM/TK1300G3.c`：17,829 字节（SHA-256: `A84F99F45EBCB47087E0E6E4FCC4D24E75372C144EB3DD90E87D9DBE93EB45A4`）
+        
+    - `Middlewares/custom/pages/pages_tire_gauge.c`：46,427 字节（SHA-256: `EE445DEF83FB1831D47EA014BA9962FCA02F8048749A28AAFD545E924222E72D`）
+        
 - **实板测试验证**：用户在硬件实机上完成运行测试，确认常压读数检测与页面自动流转逻辑完全正常。
+    
 
 #### 5. 待验证项与后续入口
 
-- 后续转入量产轮胎气压测量时，将测试模式下的 `PRESSURE_DEFAULT_BASELINE_KPA` 从 0 恢复为动态标定/名义大气压（100 kPa）；
-- 接入蜂鸣器与 `SETTINGS` 声音开关联动（读数稳定鸣叫 1 声、保存成功双短鸣）；
-- 本次日志收尾仅更新 `Development_Log.md`；未修改 `Project_Architecture.md`、`File_Structure.md`。
+- 后续转入量产轮胎气压测量时，将测试模式下的 `PRESSURE_DEFAULT_BASELINE_KPA` 从 0 恢复为动态标定/名义大气压（100 kPa）；
+    
+- 接入蜂鸣器与 `SETTINGS` 声音开关联动（读数稳定鸣叫 1 声、保存成功双短鸣）；
+    
+- 本次日志收尾仅更新 `Development_Log.md`；未修改 `Project_Architecture.md`、`File_Structure.md`。
