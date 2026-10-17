@@ -1,0 +1,2200 @@
+00000000 c7fe                LGOTO    0x1; __nyc_ny8_startup=0x1
+__nyc_ny8_startup:
+00000001 d7fc                LCALL    0x3; ___cinit_load__=0x3
+00000002 c1d2                LGOTO    0x62d; _main=0x62d
+___cinit_load__:
+___cinit_run__:
+crt0.o:crt0_end:
+00000003 ffef                RET
+00000008 c17c                LGOTO    0x683; _isr=0x683
+_waveform_model_load_stage:
+00000009 ff2c                MOVAR    0x53
+0000000a fe85                MOVR     0x7a, ToAcc
+0000000b ff2b                MOVAR    0x54
+0000000c feac                MOVR     0x53, ToAcc
+0000000d dbf1                XORIA    0xe
+0000000e f6fc                BTRSS    STATUS, Z
+0000000f c766                LGOTO    0x99; waveform_perfect_model_gemini.o:_02019_DS_=0x99
+00000010 ded2                MOVIA    0x2d
+00000011 fbab                SUBAR    0x54, ToAcc
+00000012 f3fc                BTRSC    STATUS, C
+00000013 c7e4                LGOTO    0x1b; waveform_perfect_model_gemini.o:_02006_DS_=0x1b
+00000014 deef                MOVIA    0x10
+00000015 ff59                MOVAR    0x26
+00000016 fd58                CLRR     0x27
+00000017 deee                MOVIA    0x11
+00000018 ff57                MOVAR    0x28
+00000019 fd56                CLRR     0x29
+0000001a c5c4                LGOTO    0x23b; waveform_perfect_model_gemini.o:_02078_DS_=0x23b
+waveform_perfect_model_gemini.o:_02006_DS_:
+0000001b feab                MOVR     0x54, ToAcc
+0000001c dbd2                XORIA    0x2d
+0000001d f6fc                BTRSS    STATUS, Z
+0000001e c7d9                LGOTO    0x26; waveform_perfect_model_gemini.o:_02008_DS_=0x26
+0000001f decf                MOVIA    0x30
+00000020 ff59                MOVAR    0x26
+00000021 fd58                CLRR     0x27
+00000022 dece                MOVIA    0x31
+00000023 ff57                MOVAR    0x28
+00000024 fd56                CLRR     0x29
+00000025 c5c4                LGOTO    0x23b; waveform_perfect_model_gemini.o:_02078_DS_=0x23b
+waveform_perfect_model_gemini.o:_02008_DS_:
+00000026 dece                MOVIA    0x31
+00000027 fbab                SUBAR    0x54, ToAcc
+00000028 f3fc                BTRSC    STATUS, C
+00000029 c7c3                LGOTO    0x3c; waveform_perfect_model_gemini.o:_02013_DS_=0x3c
+0000002a feab                MOVR     0x54, ToAcc
+0000002b dbd1                XORIA    0x2e
+0000002c f6fc                BTRSS    STATUS, Z
+0000002d c7ca                LGOTO    0x35; waveform_perfect_model_gemini.o:_02010_DS_=0x35
+0000002e deef                MOVIA    0x10
+0000002f ff59                MOVAR    0x26
+00000030 fd58                CLRR     0x27
+00000031 deee                MOVIA    0x11
+00000032 ff57                MOVAR    0x28
+00000033 fd56                CLRR     0x29
+00000034 c7c4                LGOTO    0x3b; waveform_perfect_model_gemini.o:_02011_DS_=0x3b
+waveform_perfect_model_gemini.o:_02010_DS_:
+00000035 dedf                MOVIA    0x20
+00000036 ff59                MOVAR    0x26
+00000037 fd58                CLRR     0x27
+00000038 dede                MOVIA    0x21
+00000039 ff57                MOVAR    0x28
+0000003a fd56                CLRR     0x29
+waveform_perfect_model_gemini.o:_02011_DS_:
+0000003b c5c4                LGOTO    0x23b; waveform_perfect_model_gemini.o:_02078_DS_=0x23b
+waveform_perfect_model_gemini.o:_02013_DS_:
+0000003c feab                MOVR     0x54, ToAcc
+0000003d dba8                XORIA    0x57
+0000003e f6fc                BTRSS    STATUS, Z
+0000003f c7b7                LGOTO    0x48; waveform_perfect_model_gemini.o:_02015_DS_=0x48
+00000040 deef                MOVIA    0x10
+00000041 ff59                MOVAR    0x26
+00000042 fd58                CLRR     0x27
+00000043 de0a                MOVIA    0xf5
+00000044 ff57                MOVAR    0x28
+00000045 defe                MOVIA    0x1
+00000046 ff56                MOVAR    0x29
+00000047 c5c4                LGOTO    0x23b; waveform_perfect_model_gemini.o:_02078_DS_=0x23b
+waveform_perfect_model_gemini.o:_02015_DS_:
+00000048 de30                MOVIA    0xcf
+00000049 fcab                ADDAR    0x54, ToAcc
+0000004a ff2a                MOVAR    0x55
+0000004b e3fc                BCR      STATUS, C
+0000004c ecaa                RRR      0x55, ToAcc
+0000004d ff29                MOVAR    0x56
+0000004e e3fc                BCR      STATUS, C
+0000004f ec29                RRR      0x56, ToReg
+00000050 defc                MOVIA    0x3
+00000051 ef2a                ANDAR    0x55, ToReg
+00000052 e3fc                BCR      STATUS, C
+00000053 eb2a                RLR      0x55, ToReg
+00000054 de25                MOVIA    0xda
+00000055 fc29                ADDAR    0x56, ToReg
+00000056 def8                MOVIA    0x7
+00000057 d9ff                ADCIA    0x0
+00000058 ff28                MOVAR    0x57
+00000059 fea8                MOVR     0x57, ToAcc
+0000005a ffb8                SFUN     TBHP
+0000005b fea9                MOVR     0x56, ToAcc
+0000005c fdee                TABLEA
+0000005d ff27                MOVAR    0x58
+0000005e ff29                MOVAR    0x56
+0000005f feaa                MOVR     0x55, ToAcc
+00000060 d8ff                SUBIA    0x0
+00000061 f2fc                BTRSC    STATUS, Z
+00000062 c798                LGOTO    0x67; waveform_perfect_model_gemini.o:_02220_DS_=0x67
+waveform_perfect_model_gemini.o:_02219_DS_:
+00000063 ec29                RRR      0x56, ToReg
+00000064 dafe                ADDIA    0x1
+00000065 f7fc                BTRSS    STATUS, C
+00000066 c79c                LGOTO    0x63; waveform_perfect_model_gemini.o:_02219_DS_=0x63
+waveform_perfect_model_gemini.o:_02220_DS_:
+00000067 defc                MOVIA    0x3
+00000068 ef29                ANDAR    0x56, ToReg
+00000069 defd                MOVIA    0x2
+0000006a efa9                ANDAR    0x56, ToAcc
+0000006b ff2a                MOVAR    0x55
+0000006c feaa                MOVR     0x55, ToAcc
+0000006d deff                MOVIA    0x0
+0000006e f2fc                BTRSC    STATUS, Z
+0000006f defe                MOVIA    0x1
+00000070 ff28                MOVAR    0x57
+00000071 fea8                MOVR     0x57, ToAcc
+00000072 f6fc                BTRSS    STATUS, Z
+00000073 c788                LGOTO    0x77; waveform_perfect_model_gemini.o:_02080_DS_=0x77
+00000074 dedf                MOVIA    0x20
+00000075 ff2a                MOVAR    0x55
+00000076 c786                LGOTO    0x79; waveform_perfect_model_gemini.o:_02081_DS_=0x79
+waveform_perfect_model_gemini.o:_02080_DS_:
+00000077 deef                MOVIA    0x10
+00000078 ff2a                MOVAR    0x55
+waveform_perfect_model_gemini.o:_02081_DS_:
+00000079 feaa                MOVR     0x55, ToAcc
+0000007a ff59                MOVAR    0x26
+0000007b fd58                CLRR     0x27
+0000007c defe                MOVIA    0x1
+0000007d ef29                ANDAR    0x56, ToReg
+0000007e fea9                MOVR     0x56, ToAcc
+0000007f deff                MOVIA    0x0
+00000080 f2fc                BTRSC    STATUS, Z
+00000081 defe                MOVIA    0x1
+00000082 ff2a                MOVAR    0x55
+00000083 feaa                MOVR     0x55, ToAcc
+00000084 f6fc                BTRSS    STATUS, Z
+00000085 c776                LGOTO    0x89; waveform_perfect_model_gemini.o:_02082_DS_=0x89
+00000086 dedd                MOVIA    0x22
+00000087 ff2a                MOVAR    0x55
+00000088 c774                LGOTO    0x8b; waveform_perfect_model_gemini.o:_02083_DS_=0x8b
+waveform_perfect_model_gemini.o:_02082_DS_:
+00000089 deee                MOVIA    0x11
+0000008a ff2a                MOVAR    0x55
+waveform_perfect_model_gemini.o:_02083_DS_:
+0000008b feaa                MOVR     0x55, ToAcc
+0000008c ff57                MOVAR    0x28
+0000008d fd56                CLRR     0x29
+0000008e feab                MOVR     0x54, ToAcc
+0000008f dbbe                XORIA    0x41
+00000090 f6fc                BTRSS    STATUS, Z
+00000091 c767                LGOTO    0x98; waveform_perfect_model_gemini.o:_02017_DS_=0x98
+00000092 dedf                MOVIA    0x20
+00000093 ff59                MOVAR    0x26
+00000094 fd58                CLRR     0x27
+00000095 deed                MOVIA    0x12
+00000096 ff57                MOVAR    0x28
+00000097 fd56                CLRR     0x29
+waveform_perfect_model_gemini.o:_02017_DS_:
+00000098 c5c4                LGOTO    0x23b; waveform_perfect_model_gemini.o:_02078_DS_=0x23b
+waveform_perfect_model_gemini.o:_02019_DS_:
+00000099 feac                MOVR     0x53, ToAcc
+0000009a dbf0                XORIA    0xf
+0000009b f6fc                BTRSS    STATUS, Z
+0000009c c72f                LGOTO    0xd0; waveform_perfect_model_gemini.o:_02032_DS_=0xd0
+0000009d de1d                MOVIA    0xe2
+0000009e ff59                MOVAR    0x26
+0000009f defb                MOVIA    0x4
+000000a0 ff58                MOVAR    0x27
+000000a1 de1d                MOVIA    0xe2
+000000a2 ff57                MOVAR    0x28
+000000a3 defb                MOVIA    0x4
+000000a4 ff56                MOVAR    0x29
+000000a5 feab                MOVR     0x54, ToAcc
+000000a6 f6fc                BTRSS    STATUS, Z
+000000a7 c74e                LGOTO    0xb1; waveform_perfect_model_gemini.o:_02029_DS_=0xb1
+000000a8 de57                MOVIA    0xa8
+000000a9 ff59                MOVAR    0x26
+000000aa de9e                MOVIA    0x61
+000000ab ff58                MOVAR    0x27
+000000ac de3b                MOVIA    0xc4
+000000ad ff57                MOVAR    0x28
+000000ae def6                MOVIA    0x9
+000000af ff56                MOVAR    0x29
+000000b0 c730                LGOTO    0xcf; waveform_perfect_model_gemini.o:_02030_DS_=0xcf
+waveform_perfect_model_gemini.o:_02029_DS_:
+000000b1 feab                MOVR     0x54, ToAcc
+000000b2 dbfe                XORIA    0x1
+000000b3 f6fc                BTRSS    STATUS, Z
+000000b4 c745                LGOTO    0xba; waveform_perfect_model_gemini.o:_02026_DS_=0xba
+000000b5 de3b                MOVIA    0xc4
+000000b6 ff59                MOVAR    0x26
+000000b7 def6                MOVIA    0x9
+000000b8 ff58                MOVAR    0x27
+000000b9 c730                LGOTO    0xcf; waveform_perfect_model_gemini.o:_02030_DS_=0xcf
+waveform_perfect_model_gemini.o:_02026_DS_:
+000000ba feab                MOVR     0x54, ToAcc
+000000bb dbfb                XORIA    0x4
+000000bc f6fc                BTRSS    STATUS, Z
+000000bd c73c                LGOTO    0xc3; waveform_perfect_model_gemini.o:_02023_DS_=0xc3
+000000be de3b                MOVIA    0xc4
+000000bf ff57                MOVAR    0x28
+000000c0 def6                MOVIA    0x9
+000000c1 ff56                MOVAR    0x29
+000000c2 c730                LGOTO    0xcf; waveform_perfect_model_gemini.o:_02030_DS_=0xcf
+waveform_perfect_model_gemini.o:_02023_DS_:
+000000c3 feab                MOVR     0x54, ToAcc
+000000c4 dbf9                XORIA    0x6
+000000c5 f6fc                BTRSS    STATUS, Z
+000000c6 c730                LGOTO    0xcf; waveform_perfect_model_gemini.o:_02030_DS_=0xcf
+000000c7 de3b                MOVIA    0xc4
+000000c8 ff59                MOVAR    0x26
+000000c9 def6                MOVIA    0x9
+000000ca ff58                MOVAR    0x27
+000000cb de83                MOVIA    0x7c
+000000cc ff57                MOVAR    0x28
+000000cd de6d                MOVIA    0x92
+000000ce ff56                MOVAR    0x29
+waveform_perfect_model_gemini.o:_02030_DS_:
+000000cf c5c4                LGOTO    0x23b; waveform_perfect_model_gemini.o:_02078_DS_=0x23b
+waveform_perfect_model_gemini.o:_02032_DS_:
+000000d0 def1                MOVIA    0xe
+000000d1 fbac                SUBAR    0x53, ToAcc
+000000d2 f3fc                BTRSC    STATUS, C
+000000d3 c66b                LGOTO    0x194; waveform_perfect_model_gemini.o:_02047_DS_=0x194
+000000d4 deff                MOVIA    0x0
+000000d5 ff75                MOVAR    PCHBUF
+000000d6 feac                MOVR     0x53, ToAcc
+000000d7 da24                ADDIA    0xdb
+000000d8 f3fc                BTRSC    STATUS, C
+000000d9 fa75                INCR     PCHBUF, ToReg
+000000da ff7d                MOVAR    PCL
+waveform_perfect_model_gemini.o:_02221_DS_:
+000000db c716                LGOTO    0xe9; waveform_perfect_model_gemini.o:_02033_DS_=0xe9
+000000dc c709                LGOTO    0xf6; waveform_perfect_model_gemini.o:_02034_DS_=0xf6
+000000dd c6fd                LGOTO    0x102; waveform_perfect_model_gemini.o:_02035_DS_=0x102
+000000de c6f1                LGOTO    0x10e; waveform_perfect_model_gemini.o:_02036_DS_=0x10e
+000000df c6e5                LGOTO    0x11a; waveform_perfect_model_gemini.o:_02037_DS_=0x11a
+000000e0 c6d9                LGOTO    0x126; waveform_perfect_model_gemini.o:_02038_DS_=0x126
+000000e1 c6cc                LGOTO    0x133; waveform_perfect_model_gemini.o:_02039_DS_=0x133
+000000e2 c6c0                LGOTO    0x13f; waveform_perfect_model_gemini.o:_02040_DS_=0x13f
+000000e3 c6b4                LGOTO    0x14b; waveform_perfect_model_gemini.o:_02041_DS_=0x14b
+000000e4 c6a7                LGOTO    0x158; waveform_perfect_model_gemini.o:_02042_DS_=0x158
+000000e5 c69c                LGOTO    0x163; waveform_perfect_model_gemini.o:_02043_DS_=0x163
+000000e6 c68f                LGOTO    0x170; waveform_perfect_model_gemini.o:_02044_DS_=0x170
+000000e7 c683                LGOTO    0x17c; waveform_perfect_model_gemini.o:_02045_DS_=0x17c
+000000e8 c676                LGOTO    0x189; waveform_perfect_model_gemini.o:_02046_DS_=0x189
+waveform_perfect_model_gemini.o:_02033_DS_:
+000000e9 dec9                MOVIA    0x36
+000000ea ff2a                MOVAR    0x55
+000000eb def8                MOVIA    0x7
+000000ec ff29                MOVAR    0x56
+000000ed decf                MOVIA    0x30
+000000ee ff28                MOVAR    0x57
+000000ef defe                MOVIA    0x1
+000000f0 ff27                MOVAR    0x58
+000000f1 defb                MOVIA    0x4
+000000f2 ff26                MOVAR    0x59
+000000f3 dec0                MOVIA    0x3f
+000000f4 ff25                MOVAR    0x5a
+000000f5 c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02034_DS_:
+000000f6 deb9                MOVIA    0x46
+000000f7 ff2a                MOVAR    0x55
+000000f8 def8                MOVIA    0x7
+000000f9 ff29                MOVAR    0x56
+000000fa de7f                MOVIA    0x80
+000000fb ff28                MOVAR    0x57
+000000fc fd27                CLRR     0x58
+000000fd defb                MOVIA    0x4
+000000fe ff26                MOVAR    0x59
+000000ff dec1                MOVIA    0x3e
+00000100 ff25                MOVAR    0x5a
+00000101 c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02035_DS_:
+00000102 de6c                MOVIA    0x93
+00000103 ff2a                MOVAR    0x55
+00000104 def8                MOVIA    0x7
+00000105 ff29                MOVAR    0x56
+00000106 de0f                MOVIA    0xf0
+00000107 ff28                MOVAR    0x57
+00000108 fd27                CLRR     0x58
+00000109 defb                MOVIA    0x4
+0000010a ff26                MOVAR    0x59
+0000010b decf                MOVIA    0x30
+0000010c ff25                MOVAR    0x5a
+0000010d c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02036_DS_:
+0000010e de89                MOVIA    0x76
+0000010f ff2a                MOVAR    0x55
+00000110 def8                MOVIA    0x7
+00000111 ff29                MOVAR    0x56
+00000112 fd28                CLRR     0x57
+00000113 defe                MOVIA    0x1
+00000114 ff27                MOVAR    0x58
+00000115 defd                MOVIA    0x2
+00000116 ff26                MOVAR    0x59
+00000117 dec4                MOVIA    0x3b
+00000118 ff25                MOVAR    0x5a
+00000119 c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02037_DS_:
+0000011a dea9                MOVIA    0x56
+0000011b ff2a                MOVAR    0x55
+0000011c def8                MOVIA    0x7
+0000011d ff29                MOVAR    0x56
+0000011e de7f                MOVIA    0x80
+0000011f ff28                MOVAR    0x57
+00000120 fd27                CLRR     0x58
+00000121 defd                MOVIA    0x2
+00000122 ff26                MOVAR    0x59
+00000123 dec1                MOVIA    0x3e
+00000124 ff25                MOVAR    0x5a
+00000125 c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02038_DS_:
+00000126 de46                MOVIA    0xb9
+00000127 ff2a                MOVAR    0x55
+00000128 def8                MOVIA    0x7
+00000129 ff29                MOVAR    0x56
+0000012a de1b                MOVIA    0xe4
+0000012b ff28                MOVAR    0x57
+0000012c def3                MOVIA    0xc
+0000012d ff27                MOVAR    0x58
+0000012e defc                MOVIA    0x3
+0000012f ff26                MOVAR    0x59
+00000130 ded5                MOVIA    0x2a
+00000131 ff25                MOVAR    0x5a
+00000132 c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02039_DS_:
+00000133 de99                MOVIA    0x66
+00000134 ff2a                MOVAR    0x55
+00000135 def8                MOVIA    0x7
+00000136 ff29                MOVAR    0x56
+00000137 de7f                MOVIA    0x80
+00000138 ff28                MOVAR    0x57
+00000139 fd27                CLRR     0x58
+0000013a defd                MOVIA    0x2
+0000013b ff26                MOVAR    0x59
+0000013c dec1                MOVIA    0x3e
+0000013d ff25                MOVAR    0x5a
+0000013e c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02040_DS_:
+0000013f deb9                MOVIA    0x46
+00000140 ff2a                MOVAR    0x55
+00000141 def8                MOVIA    0x7
+00000142 ff29                MOVAR    0x56
+00000143 de7f                MOVIA    0x80
+00000144 ff28                MOVAR    0x57
+00000145 fd27                CLRR     0x58
+00000146 defd                MOVIA    0x2
+00000147 ff26                MOVAR    0x59
+00000148 dec1                MOVIA    0x3e
+00000149 ff25                MOVAR    0x5a
+0000014a c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02041_DS_:
+0000014b de3b                MOVIA    0xc4
+0000014c ff2a                MOVAR    0x55
+0000014d defa                MOVIA    0x5
+0000014e ff29                MOVAR    0x56
+0000014f dedf                MOVIA    0x20
+00000150 ff28                MOVAR    0x57
+00000151 defe                MOVIA    0x1
+00000152 ff27                MOVAR    0x58
+00000153 defb                MOVIA    0x4
+00000154 ff26                MOVAR    0x59
+00000155 deb3                MOVIA    0x4c
+00000156 ff25                MOVAR    0x5a
+00000157 c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02042_DS_:
+00000158 de5f                MOVIA    0xa0
+00000159 ff2a                MOVAR    0x55
+0000015a def8                MOVIA    0x7
+0000015b ff29                MOVAR    0x56
+0000015c fd28                CLRR     0x57
+0000015d fd27                CLRR     0x58
+0000015e defb                MOVIA    0x4
+0000015f ff26                MOVAR    0x59
+00000160 decc                MOVIA    0x33
+00000161 ff25                MOVAR    0x5a
+00000162 c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02043_DS_:
+00000163 de3b                MOVIA    0xc4
+00000164 ff2a                MOVAR    0x55
+00000165 def8                MOVIA    0x7
+00000166 ff29                MOVAR    0x56
+00000167 de4f                MOVIA    0xb0
+00000168 ff28                MOVAR    0x57
+00000169 def1                MOVIA    0xe
+0000016a ff27                MOVAR    0x58
+0000016b defc                MOVIA    0x3
+0000016c ff26                MOVAR    0x59
+0000016d ded7                MOVIA    0x28
+0000016e ff25                MOVAR    0x5a
+0000016f c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02044_DS_:
+00000170 dedb                MOVIA    0x24
+00000171 ff2a                MOVAR    0x55
+00000172 def8                MOVIA    0x7
+00000173 ff29                MOVAR    0x56
+00000174 de3f                MOVIA    0xc0
+00000175 ff28                MOVAR    0x57
+00000176 fd27                CLRR     0x58
+00000177 defb                MOVIA    0x4
+00000178 ff26                MOVAR    0x59
+00000179 debb                MOVIA    0x44
+0000017a ff25                MOVAR    0x5a
+0000017b c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02045_DS_:
+0000017c de30                MOVIA    0xcf
+0000017d ff2a                MOVAR    0x55
+0000017e def8                MOVIA    0x7
+0000017f ff29                MOVAR    0x56
+00000180 debf                MOVIA    0x40
+00000181 ff28                MOVAR    0x57
+00000182 def0                MOVIA    0xf
+00000183 ff27                MOVAR    0x58
+00000184 deef                MOVIA    0x10
+00000185 ff26                MOVAR    0x59
+00000186 ded6                MOVIA    0x29
+00000187 ff25                MOVAR    0x5a
+00000188 c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02046_DS_:
+00000189 de7a                MOVIA    0x85
+0000018a ff2a                MOVAR    0x55
+0000018b def8                MOVIA    0x7
+0000018c ff29                MOVAR    0x56
+0000018d fd28                CLRR     0x57
+0000018e fd27                CLRR     0x58
+0000018f defb                MOVIA    0x4
+00000190 ff26                MOVAR    0x59
+00000191 dec9                MOVIA    0x36
+00000192 ff25                MOVAR    0x5a
+00000193 c666                LGOTO    0x199; waveform_perfect_model_gemini.o:_02048_DS_=0x199
+waveform_perfect_model_gemini.o:_02047_DS_:
+00000194 fd59                CLRR     0x26
+00000195 fd58                CLRR     0x27
+00000196 fd57                CLRR     0x28
+00000197 fd56                CLRR     0x29
+00000198 c5c4                LGOTO    0x23b; waveform_perfect_model_gemini.o:_02078_DS_=0x23b
+waveform_perfect_model_gemini.o:_02048_DS_:
+00000199 fd24                CLRR     0x5b
+0000019a feac                MOVR     0x53, ToAcc
+0000019b dbf7                XORIA    0x8
+0000019c f6fc                BTRSS    STATUS, Z
+0000019d c660                LGOTO    0x19f; waveform_perfect_model_gemini.o:_00001_DS_=0x19f
+0000019e fa24                INCR     0x5b, ToReg
+waveform_perfect_model_gemini.o:_00001_DS_:
+0000019f fea4                MOVR     0x5b, ToAcc
+000001a0 f2fc                BTRSC    STATUS, Z
+000001a1 c659                LGOTO    0x1a6; waveform_perfect_model_gemini.o:_02067_DS_=0x1a6
+000001a2 feab                MOVR     0x54, ToAcc
+000001a3 dbb4                XORIA    0x4b
+000001a4 f2fc                BTRSC    STATUS, Z
+000001a5 c64c                LGOTO    0x1b3; waveform_perfect_model_gemini.o:_02062_DS_=0x1b3
+waveform_perfect_model_gemini.o:_02067_DS_:
+000001a6 fd23                CLRR     0x5c
+000001a7 feac                MOVR     0x53, ToAcc
+000001a8 dbf5                XORIA    0xa
+000001a9 f6fc                BTRSS    STATUS, Z
+000001aa c653                LGOTO    0x1ac; waveform_perfect_model_gemini.o:_00002_DS_=0x1ac
+000001ab fa23                INCR     0x5c, ToReg
+waveform_perfect_model_gemini.o:_00002_DS_:
+000001ac fea3                MOVR     0x5c, ToAcc
+000001ad f2fc                BTRSC    STATUS, Z
+000001ae c647                LGOTO    0x1b8; waveform_perfect_model_gemini.o:_02063_DS_=0x1b8
+000001af feab                MOVR     0x54, ToAcc
+000001b0 dbd8                XORIA    0x27
+000001b1 f6fc                BTRSS    STATUS, Z
+000001b2 c647                LGOTO    0x1b8; waveform_perfect_model_gemini.o:_02063_DS_=0x1b8
+waveform_perfect_model_gemini.o:_02062_DS_:
+000001b3 fea8                MOVR     0x57, ToAcc
+000001b4 ff22                MOVAR    0x5d
+000001b5 fea7                MOVR     0x58, ToAcc
+000001b6 ff21                MOVAR    0x5e
+000001b7 c5f0                LGOTO    0x20f; waveform_perfect_model_gemini.o:_02064_DS_=0x20f
+waveform_perfect_model_gemini.o:_02063_DS_:
+000001b8 fea4                MOVR     0x5b, ToAcc
+000001b9 f2fc                BTRSC    STATUS, Z
+000001ba c640                LGOTO    0x1bf; waveform_perfect_model_gemini.o:_02061_DS_=0x1bf
+000001bb feab                MOVR     0x54, ToAcc
+000001bc dbb3                XORIA    0x4c
+000001bd f2fc                BTRSC    STATUS, Z
+000001be c639                LGOTO    0x1c6; waveform_perfect_model_gemini.o:_02056_DS_=0x1c6
+waveform_perfect_model_gemini.o:_02061_DS_:
+000001bf fea3                MOVR     0x5c, ToAcc
+000001c0 f2fc                BTRSC    STATUS, Z
+000001c1 c635                LGOTO    0x1ca; waveform_perfect_model_gemini.o:_02057_DS_=0x1ca
+000001c2 feab                MOVR     0x54, ToAcc
+000001c3 dbd7                XORIA    0x28
+000001c4 f6fc                BTRSS    STATUS, Z
+000001c5 c635                LGOTO    0x1ca; waveform_perfect_model_gemini.o:_02057_DS_=0x1ca
+waveform_perfect_model_gemini.o:_02056_DS_:
+000001c6 de7f                MOVIA    0x80
+000001c7 ff22                MOVAR    0x5d
+000001c8 fd21                CLRR     0x5e
+000001c9 c5f0                LGOTO    0x20f; waveform_perfect_model_gemini.o:_02064_DS_=0x20f
+waveform_perfect_model_gemini.o:_02057_DS_:
+000001ca fea7                MOVR     0x58, ToAcc
+000001cb eea8                IORAR    0x57, ToAcc
+000001cc f2fc                BTRSC    STATUS, Z
+000001cd c628                LGOTO    0x1d7; waveform_perfect_model_gemini.o:_02053_DS_=0x1d7
+000001ce fea5                MOVR     0x5a, ToAcc
+000001cf edab                XORAR    0x54, ToAcc
+000001d0 f6fc                BTRSS    STATUS, Z
+000001d1 c628                LGOTO    0x1d7; waveform_perfect_model_gemini.o:_02053_DS_=0x1d7
+000001d2 fea8                MOVR     0x57, ToAcc
+000001d3 ff22                MOVAR    0x5d
+000001d4 fea7                MOVR     0x58, ToAcc
+000001d5 ff21                MOVAR    0x5e
+000001d6 c5f0                LGOTO    0x20f; waveform_perfect_model_gemini.o:_02064_DS_=0x20f
+waveform_perfect_model_gemini.o:_02053_DS_:
+000001d7 e3fc                BCR      STATUS, C
+000001d8 ecab                RRR      0x54, ToAcc
+000001d9 ff28                MOVAR    0x57
+000001da e3fc                BCR      STATUS, C
+000001db ec28                RRR      0x57, ToReg
+000001dc defc                MOVIA    0x3
+000001dd efab                ANDAR    0x54, ToAcc
+000001de ff27                MOVAR    0x58
+000001df e3fc                BCR      STATUS, C
+000001e0 eb27                RLR      0x58, ToReg
+000001e1 feaa                MOVR     0x55, ToAcc
+000001e2 fc28                ADDAR    0x57, ToReg
+000001e3 fea9                MOVR     0x56, ToAcc
+000001e4 d9ff                ADCIA    0x0
+000001e5 ff25                MOVAR    0x5a
+000001e6 fea5                MOVR     0x5a, ToAcc
+000001e7 ffb8                SFUN     TBHP
+000001e8 fea8                MOVR     0x57, ToAcc
+000001e9 fdee                TABLEA
+000001ea ff2a                MOVAR    0x55
+000001eb ff29                MOVAR    0x56
+000001ec fea7                MOVR     0x58, ToAcc
+000001ed d8ff                SUBIA    0x0
+000001ee f2fc                BTRSC    STATUS, Z
+000001ef c60b                LGOTO    0x1f4; waveform_perfect_model_gemini.o:_02227_DS_=0x1f4
+waveform_perfect_model_gemini.o:_02226_DS_:
+000001f0 ec29                RRR      0x56, ToReg
+000001f1 dafe                ADDIA    0x1
+000001f2 f7fc                BTRSS    STATUS, C
+000001f3 c60f                LGOTO    0x1f0; waveform_perfect_model_gemini.o:_02226_DS_=0x1f0
+waveform_perfect_model_gemini.o:_02227_DS_:
+000001f4 defc                MOVIA    0x3
+000001f5 ef29                ANDAR    0x56, ToReg
+000001f6 fea9                MOVR     0x56, ToAcc
+000001f7 dbfc                XORIA    0x3
+000001f8 f6fc                BTRSS    STATUS, Z
+000001f9 c601                LGOTO    0x1fe; waveform_perfect_model_gemini.o:_02050_DS_=0x1fe
+000001fa de9f                MOVIA    0x60
+000001fb ff22                MOVAR    0x5d
+000001fc fd21                CLRR     0x5e
+000001fd c5f0                LGOTO    0x20f; waveform_perfect_model_gemini.o:_02064_DS_=0x20f
+waveform_perfect_model_gemini.o:_02050_DS_:
+000001fe fea9                MOVR     0x56, ToAcc
+000001ff ff2a                MOVAR    0x55
+00000200 fd28                CLRR     0x57
+00000201 eaa8                SWAPR    0x57, ToAcc
+00000202 dd0f                ANDIA    0xf0
+00000203 ff27                MOVAR    0x58
+00000204 eaaa                SWAPR    0x55, ToAcc
+00000205 ff29                MOVAR    0x56
+00000206 ddf0                ANDIA    0xf
+00000207 ee27                IORAR    0x58, ToReg
+00000208 ed29                XORAR    0x56, ToReg
+00000209 dedf                MOVIA    0x20
+0000020a fca9                ADDAR    0x56, ToAcc
+0000020b ff22                MOVAR    0x5d
+0000020c deff                MOVIA    0x0
+0000020d cba7                ADCAR    0x58, ToAcc
+0000020e ff21                MOVAR    0x5e
+waveform_perfect_model_gemini.o:_02064_DS_:
+0000020f feac                MOVR     0x53, ToAcc
+00000210 dbf3                XORIA    0xc
+00000211 f6fc                BTRSS    STATUS, Z
+00000212 c5d3                LGOTO    0x22c; waveform_perfect_model_gemini.o:_02077_DS_=0x22c
+00000213 feab                MOVR     0x54, ToAcc
+00000214 dbf8                XORIA    0x7
+00000215 f6fc                BTRSS    STATUS, Z
+00000216 c5e5                LGOTO    0x21a; waveform_perfect_model_gemini.o:_02074_DS_=0x21a
+00000217 decf                MOVIA    0x30
+00000218 ff26                MOVAR    0x59
+00000219 c5d3                LGOTO    0x22c; waveform_perfect_model_gemini.o:_02077_DS_=0x22c
+waveform_perfect_model_gemini.o:_02074_DS_:
+0000021a feab                MOVR     0x54, ToAcc
+0000021b dbf6                XORIA    0x9
+0000021c f2fc                BTRSC    STATUS, Z
+0000021d c5d5                LGOTO    0x22a; waveform_perfect_model_gemini.o:_02068_DS_=0x22a
+0000021e feab                MOVR     0x54, ToAcc
+0000021f dbf5                XORIA    0xa
+00000220 f2fc                BTRSC    STATUS, Z
+00000221 c5d5                LGOTO    0x22a; waveform_perfect_model_gemini.o:_02068_DS_=0x22a
+00000222 feab                MOVR     0x54, ToAcc
+00000223 dbe6                XORIA    0x19
+00000224 f2fc                BTRSC    STATUS, Z
+00000225 c5d5                LGOTO    0x22a; waveform_perfect_model_gemini.o:_02068_DS_=0x22a
+00000226 feab                MOVR     0x54, ToAcc
+00000227 dbdd                XORIA    0x22
+00000228 f6fc                BTRSS    STATUS, Z
+00000229 c5d3                LGOTO    0x22c; waveform_perfect_model_gemini.o:_02077_DS_=0x22c
+waveform_perfect_model_gemini.o:_02068_DS_:
+0000022a dedf                MOVIA    0x20
+0000022b ff26                MOVAR    0x59
+waveform_perfect_model_gemini.o:_02077_DS_:
+0000022c fea6                MOVR     0x59, ToAcc
+0000022d ff59                MOVAR    0x26
+0000022e fd58                CLRR     0x27
+0000022f fea6                MOVR     0x59, ToAcc
+00000230 ff2c                MOVAR    0x53
+00000231 fd2b                CLRR     0x54
+00000232 deff                MOVIA    0x0
+00000233 ff29                MOVAR    0x56
+00000234 fea6                MOVR     0x59, ToAcc
+00000235 ff2a                MOVAR    0x55
+00000236 fba2                SUBAR    0x5d, ToAcc
+00000237 ff57                MOVAR    0x28
+00000238 fea9                MOVR     0x56, ToAcc
+00000239 caa1                SBCAR    0x5e, ToAcc
+0000023a ff56                MOVAR    0x29
+waveform_perfect_model_gemini.o:_02078_DS_:
+0000023b ffef                RET
+main.o:_load_playlist_entry:
+0000023c ff40                MOVAR    0x3f
+0000023d e3fc                BCR      STATUS, C
+0000023e ebc0                RLR      0x3f, ToAcc
+0000023f fc40                ADDAR    0x3f, ToReg
+00000240 fec0                MOVR     0x3f, ToAcc
+00000241 da17                ADDIA    0xe8
+00000242 ff3f                MOVAR    0x40
+00000243 def9                MOVIA    0x6
+00000244 d9ff                ADCIA    0x0
+00000245 ff3e                MOVAR    0x41
+00000246 febe                MOVR     0x41, ToAcc
+00000247 ffb8                SFUN     TBHP
+00000248 febf                MOVR     0x40, ToAcc
+00000249 fdee                TABLEA
+0000024a ff3d                MOVAR    0x42
+0000024b fac0                INCR     0x3f, ToAcc
+0000024c ff3f                MOVAR    0x40
+0000024d de17                MOVIA    0xe8
+0000024e fc3f                ADDAR    0x40, ToReg
+0000024f def9                MOVIA    0x6
+00000250 d9ff                ADCIA    0x0
+00000251 ff3e                MOVAR    0x41
+00000252 febe                MOVR     0x41, ToAcc
+00000253 ffb8                SFUN     TBHP
+00000254 febf                MOVR     0x40, ToAcc
+00000255 fdee                TABLEA
+00000256 ff3c                MOVAR    0x43
+00000257 fdff                CLRA
+00000258 ffb5                SFUN     T2CR1
+00000259 de20                MOVIA    0xdf
+0000025a ff70                MOVAR    INTF
+0000025b fd5d                CLRR     0x22
+0000025c fd5c                CLRR     0x23
+0000025d fd5b                CLRR     0x24
+0000025e fd5a                CLRR     0x25
+0000025f fd4f                CLRR     0x30
+00000260 fd4e                CLRR     0x31
+00000261 fd4d                CLRR     0x32
+00000262 fd4c                CLRR     0x33
+00000263 fd4b                CLRR     0x34
+00000264 fd4a                CLRR     0x35
+00000265 defd                MOVIA    0x2
+00000266 ff52                MOVAR    0x2d
+00000267 dee0                MOVIA    0x1f
+00000268 efbc                ANDAR    0x43, ToAcc
+00000269 ff51                MOVAR    0x2e
+0000026a fa40                INCR     0x3f, ToReg
+0000026b fa40                INCR     0x3f, ToReg
+0000026c de17                MOVIA    0xe8
+0000026d fc40                ADDAR    0x3f, ToReg
+0000026e def9                MOVIA    0x6
+0000026f d9ff                ADCIA    0x0
+00000270 ff3f                MOVAR    0x40
+00000271 febf                MOVR     0x40, ToAcc
+00000272 ffb8                SFUN     TBHP
+00000273 fec0                MOVR     0x3f, ToAcc
+00000274 fdee                TABLEA
+00000275 ff50                MOVAR    0x2f
+00000276 fd49                CLRR     0x36
+00000277 fd48                CLRR     0x37
+00000278 fd47                CLRR     0x38
+00000279 fd46                CLRR     0x39
+0000027a deff                MOVIA    0x0
+0000027b d24d                LCALL    0x5b2; main.o:_pwm3_set_enabled=0x5b2
+0000027c febd                MOVR     0x42, ToAcc
+0000027d ff40                MOVAR    0x3f
+0000027e fd3f                CLRR     0x40
+0000027f eabf                SWAPR    0x40, ToAcc
+00000280 dd0f                ANDIA    0xf0
+00000281 ff3d                MOVAR    0x42
+00000282 eac0                SWAPR    0x3f, ToAcc
+00000283 ff3e                MOVAR    0x41
+00000284 ddf0                ANDIA    0xf
+00000285 ee3d                IORAR    0x42, ToReg
+00000286 ed3e                XORAR    0x41, ToReg
+00000287 e3fc                BCR      STATUS, C
+00000288 eb40                RLR      0x3f, ToReg
+00000289 eb3f                RLR      0x40, ToReg
+0000028a e3fc                BCR      STATUS, C
+0000028b eb40                RLR      0x3f, ToReg
+0000028c eb3f                RLR      0x40, ToReg
+0000028d fec0                MOVR     0x3f, ToAcc
+0000028e fcbe                ADDAR    0x41, ToAcc
+0000028f ff5f                MOVAR    0x20
+00000290 febf                MOVR     0x40, ToAcc
+00000291 cbbd                ADCAR    0x42, ToAcc
+00000292 ff5e                MOVAR    0x21
+00000293 dedf                MOVIA    0x20
+00000294 efbc                ANDAR    0x43, ToAcc
+00000295 ff40                MOVAR    0x3f
+00000296 fec0                MOVR     0x3f, ToAcc
+00000297 f2fc                BTRSC    STATUS, Z
+00000298 c563                LGOTO    0x29c; main.o:_02107_DS_=0x29c
+00000299 ded7                MOVIA    0x28
+0000029a ffac                SFUN     PWM3DUTY
+0000029b c561                LGOTO    0x29e; main.o:_02108_DS_=0x29e
+main.o:_02107_DS_:
+0000029c dee6                MOVIA    0x19
+0000029d ffac                SFUN     PWM3DUTY
+main.o:_02108_DS_:
+0000029e de3f                MOVIA    0xc0
+0000029f ef3c                ANDAR    0x43, ToReg
+000002a0 febc                MOVR     0x43, ToAcc
+000002a1 f6fc                BTRSS    STATUS, Z
+000002a2 c55a                LGOTO    0x2a5; main.o:_02119_DS_=0x2a5
+000002a3 fd52                CLRR     0x2d
+000002a4 c544                LGOTO    0x2bb; main.o:_02120_DS_=0x2bb
+main.o:_02119_DS_:
+000002a5 febc                MOVR     0x43, ToAcc
+000002a6 dbbf                XORIA    0x40
+000002a7 f6fc                BTRSS    STATUS, Z
+000002a8 c553                LGOTO    0x2ac; main.o:_02116_DS_=0x2ac
+000002a9 defb                MOVIA    0x4
+000002aa ff52                MOVAR    0x2d
+000002ab c544                LGOTO    0x2bb; main.o:_02120_DS_=0x2bb
+main.o:_02116_DS_:
+000002ac febc                MOVR     0x43, ToAcc
+000002ad db7f                XORIA    0x80
+000002ae f6fc                BTRSS    STATUS, Z
+000002af c546                LGOTO    0x2b9; main.o:_02113_DS_=0x2b9
+000002b0 fec0                MOVR     0x3f, ToAcc
+000002b1 f2fc                BTRSC    STATUS, Z
+000002b2 c549                LGOTO    0x2b6; main.o:_02110_DS_=0x2b6
+000002b3 defe                MOVIA    0x1
+000002b4 ff52                MOVAR    0x2d
+000002b5 c544                LGOTO    0x2bb; main.o:_02120_DS_=0x2bb
+main.o:_02110_DS_:
+000002b6 defd                MOVIA    0x2
+000002b7 ff52                MOVAR    0x2d
+000002b8 c544                LGOTO    0x2bb; main.o:_02120_DS_=0x2bb
+main.o:_02113_DS_:
+000002b9 defc                MOVIA    0x3
+000002ba ff52                MOVAR    0x2d
+main.o:_02120_DS_:
+000002bb fed2                MOVR     0x2d, ToAcc
+000002bc dbfe                XORIA    0x1
+000002bd f6fc                BTRSS    STATUS, Z
+000002be c53d                LGOTO    0x2c2; main.o:_02122_DS_=0x2c2
+000002bf defe                MOVIA    0x1
+000002c0 d24d                LCALL    0x5b2; main.o:_pwm3_set_enabled=0x5b2
+000002c1 c4ae                LGOTO    0x351; main.o:_02140_DS_=0x351
+main.o:_02122_DS_:
+000002c2 fed2                MOVR     0x2d, ToAcc
+000002c3 dbfd                XORIA    0x2
+000002c4 f2fc                BTRSC    STATUS, Z
+000002c5 c4ae                LGOTO    0x351; main.o:_02140_DS_=0x351
+000002c6 deb1                MOVIA    0x4e
+000002c7 ff40                MOVAR    0x3f
+000002c8 fd3f                CLRR     0x40
+000002c9 fd3e                CLRR     0x41
+000002ca fec0                MOVR     0x3f, ToAcc
+000002cb ff04                MOVAR    0x7b
+000002cc deff                MOVIA    0x0
+000002cd ff05                MOVAR    0x7a
+000002ce d2d1                LCALL    0x52e; main.o:_select_next_stage=0x52e
+000002cf ff40                MOVAR    0x3f
+000002d0 dbfd                XORIA    0x2
+000002d1 f6fc                BTRSS    STATUS, Z
+000002d2 c51e                LGOTO    0x2e1; main.o:_02126_DS_=0x2e1
+000002d3 feb1                MOVR     0x4e, ToAcc
+000002d4 ff05                MOVAR    0x7a
+000002d5 fed1                MOVR     0x2e, ToAcc
+000002d6 d7f6                LCALL    0x9; _waveform_model_load_stage=0x9
+000002d7 fed9                MOVR     0x26, ToAcc
+000002d8 ff5d                MOVAR    0x22
+000002d9 fed8                MOVR     0x27, ToAcc
+000002da ff5c                MOVAR    0x23
+000002db fed7                MOVR     0x28, ToAcc
+000002dc ff5b                MOVAR    0x24
+000002dd fed6                MOVR     0x29, ToAcc
+000002de ff5a                MOVAR    0x25
+000002df defe                MOVIA    0x1
+000002e0 ff40                MOVAR    0x3f
+main.o:_02126_DS_:
+000002e1 fec0                MOVR     0x3f, ToAcc
+000002e2 f2fc                BTRSC    STATUS, Z
+000002e3 c4ae                LGOTO    0x351; main.o:_02140_DS_=0x351
+000002e4 d227                LCALL    0x5d8; main.o:_determine_next_chunk=0x5d8
+000002e5 ff40                MOVAR    0x3f
+000002e6 fec0                MOVR     0x3f, ToAcc
+000002e7 f2fc                BTRSC    STATUS, Z
+000002e8 c4ae                LGOTO    0x351; main.o:_02140_DS_=0x351
+000002e9 de7f                MOVIA    0x80
+000002ea efc0                ANDAR    0x3f, ToAcc
+000002eb ff3f                MOVAR    0x40
+000002ec febf                MOVR     0x40, ToAcc
+000002ed deff                MOVIA    0x0
+000002ee f2fc                BTRSC    STATUS, Z
+000002ef defe                MOVIA    0x1
+000002f0 ff3e                MOVAR    0x41
+000002f1 febe                MOVR     0x41, ToAcc
+000002f2 deff                MOVIA    0x0
+000002f3 f2fc                BTRSC    STATUS, Z
+000002f4 defe                MOVIA    0x1
+000002f5 ff3f                MOVAR    0x40
+000002f6 fd3e                CLRR     0x41
+000002f7 f7bf                BTRSS    0x40, 0x0
+000002f8 c505                LGOTO    0x2fa; main.o:_00002_DS_=0x2fa
+000002f9 fa3e                INCR     0x41, ToReg
+main.o:_00002_DS_:
+000002fa dec0                MOVIA    0x3f
+000002fb ef40                ANDAR    0x3f, ToReg
+000002fc febe                MOVR     0x41, ToAcc
+000002fd ff4f                MOVAR    0x30
+000002fe febe                MOVR     0x41, ToAcc
+000002ff deff                MOVIA    0x0
+00000300 f2fc                BTRSC    STATUS, Z
+00000301 defe                MOVIA    0x1
+00000302 ff3f                MOVAR    0x40
+00000303 febf                MOVR     0x40, ToAcc
+00000304 deff                MOVIA    0x0
+00000305 f2fc                BTRSC    STATUS, Z
+00000306 defe                MOVIA    0x1
+00000307 ff3e                MOVAR    0x41
+00000308 d24d                LCALL    0x5b2; main.o:_pwm3_set_enabled=0x5b2
+00000309 fec0                MOVR     0x3f, ToAcc
+0000030a d13d                LCALL    0x6c2; main.o:_timer2_queue_interval=0x6c2
+0000030b de20                MOVIA    0xdf
+0000030c ff70                MOVAR    INTF
+0000030d defc                MOVIA    0x3
+0000030e ffb5                SFUN     T2CR1
+0000030f d227                LCALL    0x5d8; main.o:_determine_next_chunk=0x5d8
+00000310 ff40                MOVAR    0x3f
+00000311 fec0                MOVR     0x3f, ToAcc
+00000312 f6fc                BTRSS    STATUS, Z
+00000313 c4ca                LGOTO    0x335; main.o:_02136_DS_=0x335
+00000314 deb1                MOVIA    0x4e
+00000315 ff3f                MOVAR    0x40
+00000316 fd3e                CLRR     0x41
+00000317 fd3d                CLRR     0x42
+00000318 febf                MOVR     0x40, ToAcc
+00000319 ff04                MOVAR    0x7b
+0000031a deff                MOVIA    0x0
+0000031b ff05                MOVAR    0x7a
+0000031c d2d1                LCALL    0x52e; main.o:_select_next_stage=0x52e
+0000031d ff3f                MOVAR    0x40
+0000031e dbfd                XORIA    0x2
+0000031f f6fc                BTRSS    STATUS, Z
+00000320 c4d0                LGOTO    0x32f; main.o:_02132_DS_=0x32f
+00000321 feb1                MOVR     0x4e, ToAcc
+00000322 ff05                MOVAR    0x7a
+00000323 fed1                MOVR     0x2e, ToAcc
+00000324 d7f6                LCALL    0x9; _waveform_model_load_stage=0x9
+00000325 fed9                MOVR     0x26, ToAcc
+00000326 ff5d                MOVAR    0x22
+00000327 fed8                MOVR     0x27, ToAcc
+00000328 ff5c                MOVAR    0x23
+00000329 fed7                MOVR     0x28, ToAcc
+0000032a ff5b                MOVAR    0x24
+0000032b fed6                MOVR     0x29, ToAcc
+0000032c ff5a                MOVAR    0x25
+0000032d defe                MOVIA    0x1
+0000032e ff3f                MOVAR    0x40
+main.o:_02132_DS_:
+0000032f febf                MOVR     0x40, ToAcc
+00000330 dbfe                XORIA    0x1
+00000331 f6fc                BTRSS    STATUS, Z
+00000332 c4ca                LGOTO    0x335; main.o:_02136_DS_=0x335
+00000333 d227                LCALL    0x5d8; main.o:_determine_next_chunk=0x5d8
+00000334 ff40                MOVAR    0x3f
+main.o:_02136_DS_:
+00000335 fec0                MOVR     0x3f, ToAcc
+00000336 f2fc                BTRSC    STATUS, Z
+00000337 c4af                LGOTO    0x350; main.o:_02138_DS_=0x350
+00000338 de7f                MOVIA    0x80
+00000339 efc0                ANDAR    0x3f, ToAcc
+0000033a ff3f                MOVAR    0x40
+0000033b febf                MOVR     0x40, ToAcc
+0000033c deff                MOVIA    0x0
+0000033d f2fc                BTRSC    STATUS, Z
+0000033e defe                MOVIA    0x1
+0000033f ff3e                MOVAR    0x41
+00000340 febe                MOVR     0x41, ToAcc
+00000341 deff                MOVIA    0x0
+00000342 f2fc                BTRSC    STATUS, Z
+00000343 defe                MOVIA    0x1
+00000344 ff3f                MOVAR    0x40
+00000345 fd4e                CLRR     0x31
+00000346 f7bf                BTRSS    0x40, 0x0
+00000347 c4b6                LGOTO    0x349; main.o:_00003_DS_=0x349
+00000348 fa4e                INCR     0x31, ToReg
+main.o:_00003_DS_:
+00000349 dec0                MOVIA    0x3f
+0000034a ef40                ANDAR    0x3f, ToReg
+0000034b defe                MOVIA    0x1
+0000034c ff4d                MOVAR    0x32
+0000034d fec0                MOVR     0x3f, ToAcc
+0000034e d13d                LCALL    0x6c2; main.o:_timer2_queue_interval=0x6c2
+0000034f c4ae                LGOTO    0x351; main.o:_02140_DS_=0x351
+main.o:_02138_DS_:
+00000350 fd4d                CLRR     0x32
+main.o:_02140_DS_:
+00000351 ffef                RET
+_waveform_model_load_c10_stage:
+00000352 ff20                MOVAR    0x5f
+00000353 fe85                MOVR     0x7a, ToAcc
+00000354 ff1f                MOVAR    0x60
+00000355 fea0                MOVR     0x5f, ToAcc
+00000356 f6fc                BTRSS    STATUS, Z
+00000357 c41e                LGOTO    0x3e1; waveform_perfect_model_gemini.o:_02251_DS_=0x3e1
+00000358 def0                MOVIA    0xf
+00000359 fb9f                SUBAR    0x60, ToAcc
+0000035a fd1e                CLRR     0x61
+0000035b f7fc                BTRSS    STATUS, C
+0000035c e79e                BSR      0x61, 0x0
+0000035d fe9e                MOVR     0x61, ToAcc
+0000035e f2fc                BTRSC    STATUS, Z
+0000035f c496                LGOTO    0x369; waveform_perfect_model_gemini.o:_02236_DS_=0x369
+00000360 de82                MOVIA    0x7d
+00000361 ff59                MOVAR    0x26
+00000362 fd58                CLRR     0x27
+00000363 de20                MOVIA    0xdf
+00000364 ff57                MOVAR    0x28
+00000365 defb                MOVIA    0x4
+00000366 ff56                MOVAR    0x29
+00000367 defe                MOVIA    0x1
+00000368 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02236_DS_:
+00000369 fe9e                MOVR     0x61, ToAcc
+0000036a f6fc                BTRSS    STATUS, Z
+0000036b c420                LGOTO    0x3df; waveform_perfect_model_gemini.o:_02248_DS_=0x3df
+0000036c dee5                MOVIA    0x1a
+0000036d fb9f                SUBAR    0x60, ToAcc
+0000036e f3fc                BTRSC    STATUS, C
+0000036f c420                LGOTO    0x3df; waveform_perfect_model_gemini.o:_02248_DS_=0x3df
+00000370 de0e                MOVIA    0xf1
+00000371 fc9f                ADDAR    0x60, ToAcc
+00000372 ff1e                MOVAR    0x61
+00000373 defc                MOVIA    0x3
+00000374 ff75                MOVAR    PCHBUF
+00000375 fe9e                MOVR     0x61, ToAcc
+00000376 da85                ADDIA    0x7a
+00000377 f3fc                BTRSC    STATUS, C
+00000378 fa75                INCR     PCHBUF, ToReg
+00000379 ff7d                MOVAR    PCL
+waveform_perfect_model_gemini.o:_02308_DS_:
+0000037a c47a                LGOTO    0x385; waveform_perfect_model_gemini.o:_02237_DS_=0x385
+0000037b c471                LGOTO    0x38e; waveform_perfect_model_gemini.o:_02238_DS_=0x38e
+0000037c c469                LGOTO    0x396; waveform_perfect_model_gemini.o:_02239_DS_=0x396
+0000037d c461                LGOTO    0x39e; waveform_perfect_model_gemini.o:_02240_DS_=0x39e
+0000037e c459                LGOTO    0x3a6; waveform_perfect_model_gemini.o:_02241_DS_=0x3a6
+0000037f c451                LGOTO    0x3ae; waveform_perfect_model_gemini.o:_02242_DS_=0x3ae
+00000380 c449                LGOTO    0x3b6; waveform_perfect_model_gemini.o:_02243_DS_=0x3b6
+00000381 c441                LGOTO    0x3be; waveform_perfect_model_gemini.o:_02244_DS_=0x3be
+00000382 c439                LGOTO    0x3c6; waveform_perfect_model_gemini.o:_02245_DS_=0x3c6
+00000383 c431                LGOTO    0x3ce; waveform_perfect_model_gemini.o:_02246_DS_=0x3ce
+00000384 c429                LGOTO    0x3d6; waveform_perfect_model_gemini.o:_02247_DS_=0x3d6
+waveform_perfect_model_gemini.o:_02237_DS_:
+00000385 dece                MOVIA    0x31
+00000386 ff59                MOVAR    0x26
+00000387 defd                MOVIA    0x2
+00000388 ff58                MOVAR    0x27
+00000389 de82                MOVIA    0x7d
+0000038a ff57                MOVAR    0x28
+0000038b fd56                CLRR     0x29
+0000038c defe                MOVIA    0x1
+0000038d c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02238_DS_:
+0000038e de82                MOVIA    0x7d
+0000038f ff59                MOVAR    0x26
+00000390 fd58                CLRR     0x27
+00000391 de82                MOVIA    0x7d
+00000392 ff57                MOVAR    0x28
+00000393 fd56                CLRR     0x29
+00000394 defe                MOVIA    0x1
+00000395 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02239_DS_:
+00000396 dea7                MOVIA    0x58
+00000397 ff59                MOVAR    0x26
+00000398 fd58                CLRR     0x27
+00000399 de83                MOVIA    0x7c
+0000039a ff57                MOVAR    0x28
+0000039b fd56                CLRR     0x29
+0000039c defe                MOVIA    0x1
+0000039d c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02240_DS_:
+0000039e dea7                MOVIA    0x58
+0000039f ff59                MOVAR    0x26
+000003a0 fd58                CLRR     0x27
+000003a1 de83                MOVIA    0x7c
+000003a2 ff57                MOVAR    0x28
+000003a3 fd56                CLRR     0x29
+000003a4 defe                MOVIA    0x1
+000003a5 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02241_DS_:
+000003a6 de2a                MOVIA    0xd5
+000003a7 ff59                MOVAR    0x26
+000003a8 fd58                CLRR     0x27
+000003a9 de83                MOVIA    0x7c
+000003aa ff57                MOVAR    0x28
+000003ab fd56                CLRR     0x29
+000003ac defe                MOVIA    0x1
+000003ad c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02242_DS_:
+000003ae dea7                MOVIA    0x58
+000003af ff59                MOVAR    0x26
+000003b0 fd58                CLRR     0x27
+000003b1 de82                MOVIA    0x7d
+000003b2 ff57                MOVAR    0x28
+000003b3 fd56                CLRR     0x29
+000003b4 defe                MOVIA    0x1
+000003b5 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02243_DS_:
+000003b6 de2a                MOVIA    0xd5
+000003b7 ff59                MOVAR    0x26
+000003b8 fd58                CLRR     0x27
+000003b9 de83                MOVIA    0x7c
+000003ba ff57                MOVAR    0x28
+000003bb fd56                CLRR     0x29
+000003bc defe                MOVIA    0x1
+000003bd c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02244_DS_:
+000003be de2a                MOVIA    0xd5
+000003bf ff59                MOVAR    0x26
+000003c0 fd58                CLRR     0x27
+000003c1 de83                MOVIA    0x7c
+000003c2 ff57                MOVAR    0x28
+000003c3 fd56                CLRR     0x29
+000003c4 defe                MOVIA    0x1
+000003c5 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02245_DS_:
+000003c6 dea7                MOVIA    0x58
+000003c7 ff59                MOVAR    0x26
+000003c8 fd58                CLRR     0x27
+000003c9 de83                MOVIA    0x7c
+000003ca ff57                MOVAR    0x28
+000003cb fd56                CLRR     0x29
+000003cc defe                MOVIA    0x1
+000003cd c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02246_DS_:
+000003ce de2a                MOVIA    0xd5
+000003cf ff59                MOVAR    0x26
+000003d0 fd58                CLRR     0x27
+000003d1 de88                MOVIA    0x77
+000003d2 ff57                MOVAR    0x28
+000003d3 defe                MOVIA    0x1
+000003d4 ff56                MOVAR    0x29
+000003d5 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02247_DS_:
+000003d6 dec0                MOVIA    0x3f
+000003d7 ff59                MOVAR    0x26
+000003d8 fd58                CLRR     0x27
+000003d9 de27                MOVIA    0xd8
+000003da ff57                MOVAR    0x28
+000003db defa                MOVIA    0x5
+000003dc ff56                MOVAR    0x29
+000003dd defe                MOVIA    0x1
+000003de c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02248_DS_:
+000003df deff                MOVIA    0x0
+000003e0 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02251_DS_:
+000003e1 fea0                MOVR     0x5f, ToAcc
+000003e2 dbfe                XORIA    0x1
+000003e3 f6fc                BTRSS    STATUS, Z
+000003e4 c3fe                LGOTO    0x401; waveform_perfect_model_gemini.o:_02258_DS_=0x401
+000003e5 def2                MOVIA    0xd
+000003e6 fb9f                SUBAR    0x60, ToAcc
+000003e7 f3fc                BTRSC    STATUS, C
+000003e8 c40d                LGOTO    0x3f2; waveform_perfect_model_gemini.o:_02255_DS_=0x3f2
+000003e9 de82                MOVIA    0x7d
+000003ea ff59                MOVAR    0x26
+000003eb fd58                CLRR     0x27
+000003ec de20                MOVIA    0xdf
+000003ed ff57                MOVAR    0x28
+000003ee defb                MOVIA    0x4
+000003ef ff56                MOVAR    0x29
+000003f0 defe                MOVIA    0x1
+000003f1 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02255_DS_:
+000003f2 fe9f                MOVR     0x60, ToAcc
+000003f3 dbf2                XORIA    0xd
+000003f4 f6fc                BTRSS    STATUS, Z
+000003f5 c400                LGOTO    0x3ff; waveform_perfect_model_gemini.o:_02256_DS_=0x3ff
+000003f6 de82                MOVIA    0x7d
+000003f7 ff59                MOVAR    0x26
+000003f8 fd58                CLRR     0x27
+000003f9 de30                MOVIA    0xcf
+000003fa ff57                MOVAR    0x28
+000003fb de9d                MOVIA    0x62
+000003fc ff56                MOVAR    0x29
+000003fd defe                MOVIA    0x1
+000003fe c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02256_DS_:
+000003ff deff                MOVIA    0x0
+00000400 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02258_DS_:
+00000401 fea0                MOVR     0x5f, ToAcc
+00000402 dbfd                XORIA    0x2
+00000403 f6fc                BTRSS    STATUS, Z
+00000404 c3a2                LGOTO    0x45d; waveform_perfect_model_gemini.o:_02269_DS_=0x45d
+00000405 def8                MOVIA    0x7
+00000406 fb9f                SUBAR    0x60, ToAcc
+00000407 f3fc                BTRSC    STATUS, C
+00000408 c3a4                LGOTO    0x45b; waveform_perfect_model_gemini.o:_02266_DS_=0x45b
+00000409 defb                MOVIA    0x4
+0000040a ff75                MOVAR    PCHBUF
+0000040b fe9f                MOVR     0x60, ToAcc
+0000040c daef                ADDIA    0x10
+0000040d f3fc                BTRSC    STATUS, C
+0000040e fa75                INCR     PCHBUF, ToReg
+0000040f ff7d                MOVAR    PCL
+waveform_perfect_model_gemini.o:_02309_DS_:
+00000410 c3e8                LGOTO    0x417; waveform_perfect_model_gemini.o:_02259_DS_=0x417
+00000411 c3de                LGOTO    0x421; waveform_perfect_model_gemini.o:_02260_DS_=0x421
+00000412 c3d4                LGOTO    0x42b; waveform_perfect_model_gemini.o:_02261_DS_=0x42b
+00000413 c3ca                LGOTO    0x435; waveform_perfect_model_gemini.o:_02262_DS_=0x435
+00000414 c3c0                LGOTO    0x43f; waveform_perfect_model_gemini.o:_02263_DS_=0x43f
+00000415 c3b6                LGOTO    0x449; waveform_perfect_model_gemini.o:_02264_DS_=0x449
+00000416 c3ac                LGOTO    0x453; waveform_perfect_model_gemini.o:_02265_DS_=0x453
+waveform_perfect_model_gemini.o:_02259_DS_:
+00000417 deaf                MOVIA    0x50
+00000418 ff59                MOVAR    0x26
+00000419 de3c                MOVIA    0xc3
+0000041a ff58                MOVAR    0x27
+0000041b de77                MOVIA    0x88
+0000041c ff57                MOVAR    0x28
+0000041d deec                MOVIA    0x13
+0000041e ff56                MOVAR    0x29
+0000041f defe                MOVIA    0x1
+00000420 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02260_DS_:
+00000421 de77                MOVIA    0x88
+00000422 ff59                MOVAR    0x26
+00000423 deec                MOVIA    0x13
+00000424 ff58                MOVAR    0x27
+00000425 de3b                MOVIA    0xc4
+00000426 ff57                MOVAR    0x28
+00000427 def6                MOVIA    0x9
+00000428 ff56                MOVAR    0x29
+00000429 defe                MOVIA    0x1
+0000042a c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02261_DS_:
+0000042b de3b                MOVIA    0xc4
+0000042c ff59                MOVAR    0x26
+0000042d def6                MOVIA    0x9
+0000042e ff58                MOVAR    0x27
+0000042f de3b                MOVIA    0xc4
+00000430 ff57                MOVAR    0x28
+00000431 def6                MOVIA    0x9
+00000432 ff56                MOVAR    0x29
+00000433 defe                MOVIA    0x1
+00000434 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02262_DS_:
+00000435 de3b                MOVIA    0xc4
+00000436 ff59                MOVAR    0x26
+00000437 def6                MOVIA    0x9
+00000438 ff58                MOVAR    0x27
+00000439 de3b                MOVIA    0xc4
+0000043a ff57                MOVAR    0x28
+0000043b def6                MOVIA    0x9
+0000043c ff56                MOVAR    0x29
+0000043d defe                MOVIA    0x1
+0000043e c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02263_DS_:
+0000043f de3b                MOVIA    0xc4
+00000440 ff59                MOVAR    0x26
+00000441 def6                MOVIA    0x9
+00000442 ff58                MOVAR    0x27
+00000443 de77                MOVIA    0x88
+00000444 ff57                MOVAR    0x28
+00000445 deec                MOVIA    0x13
+00000446 ff56                MOVAR    0x29
+00000447 defe                MOVIA    0x1
+00000448 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02264_DS_:
+00000449 de3b                MOVIA    0xc4
+0000044a ff59                MOVAR    0x26
+0000044b def6                MOVIA    0x9
+0000044c ff58                MOVAR    0x27
+0000044d de3b                MOVIA    0xc4
+0000044e ff57                MOVAR    0x28
+0000044f def6                MOVIA    0x9
+00000450 ff56                MOVAR    0x29
+00000451 defe                MOVIA    0x1
+00000452 c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02265_DS_:
+00000453 de77                MOVIA    0x88
+00000454 ff59                MOVAR    0x26
+00000455 deec                MOVIA    0x13
+00000456 ff58                MOVAR    0x27
+00000457 fd57                CLRR     0x28
+00000458 fd56                CLRR     0x29
+00000459 defe                MOVIA    0x1
+0000045a c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02266_DS_:
+0000045b deff                MOVIA    0x0
+0000045c c3a1                LGOTO    0x45e; waveform_perfect_model_gemini.o:_02270_DS_=0x45e
+waveform_perfect_model_gemini.o:_02269_DS_:
+0000045d deff                MOVIA    0x0
+waveform_perfect_model_gemini.o:_02270_DS_:
+0000045e ffef                RET
+main.o:_service_timer2_underflow:
+0000045f de20                MOVIA    0xdf
+00000460 ff70                MOVAR    INTF
+00000461 fed3                MOVR     0x2c, ToAcc
+00000462 f2fc                BTRSC    STATUS, Z
+00000463 c2d2                LGOTO    0x52d; main.o:_02181_DS_=0x52d
+00000464 fed2                MOVR     0x2d, ToAcc
+00000465 dbfd                XORIA    0x2
+00000466 f2fc                BTRSC    STATUS, Z
+00000467 c394                LGOTO    0x46b; main.o:_02147_DS_=0x46b
+00000468 fed2                MOVR     0x2d, ToAcc
+00000469 dbfe                XORIA    0x1
+0000046a f2fc                BTRSC    STATUS, Z
+main.o:_02147_DS_:
+0000046b c2d2                LGOTO    0x52d; main.o:_02181_DS_=0x52d
+0000046c fecc                MOVR     0x33, ToAcc
+0000046d f2fc                BTRSC    STATUS, Z
+0000046e c380                LGOTO    0x47f; main.o:_02151_DS_=0x47f
+0000046f ff8e                SFUNR    T3CR1
+00000470 ff3b                MOVAR    0x44
+00000471 e43b                BSR      0x44, 0x7
+00000472 febb                MOVR     0x44, ToAcc
+00000473 ffae                SFUN     T3CR1
+00000474 defe                MOVIA    0x1
+00000475 ff4f                MOVAR    0x30
+00000476 fecb                MOVR     0x34, ToAcc
+00000477 ff66                MOVAR    TMRH
+00000478 feca                MOVR     0x35, ToAcc
+00000479 ffb6                SFUN     TMR2
+0000047a fd4e                CLRR     0x31
+0000047b defe                MOVIA    0x1
+0000047c ff4d                MOVAR    0x32
+0000047d fd4c                CLRR     0x33
+0000047e c2d2                LGOTO    0x52d; main.o:_02181_DS_=0x52d
+main.o:_02151_DS_:
+0000047f fecd                MOVR     0x32, ToAcc
+00000480 f6fc                BTRSS    STATUS, Z
+00000481 c36a                LGOTO    0x495; main.o:_02155_DS_=0x495
+00000482 ff8e                SFUNR    T3CR1
+00000483 ff3b                MOVAR    0x44
+00000484 e03b                BCR      0x44, 0x7
+00000485 febb                MOVR     0x44, ToAcc
+00000486 ffae                SFUN     T3CR1
+00000487 de5e                MOVIA    0xa1
+00000488 ff7a                MOVAR    PORTA
+00000489 fdff                CLRA
+0000048a ffb5                SFUN     T2CR1
+0000048b de20                MOVIA    0xdf
+0000048c ff70                MOVAR    INTF
+0000048d fd4c                CLRR     0x33
+0000048e fed2                MOVR     0x2d, ToAcc
+0000048f dbfb                XORIA    0x4
+00000490 f6fc                BTRSS    STATUS, Z
+00000491 c36b                LGOTO    0x494; main.o:_02153_DS_=0x494
+00000492 defe                MOVIA    0x1
+00000493 ff54                MOVAR    0x2b
+main.o:_02153_DS_:
+00000494 c2d2                LGOTO    0x52d; main.o:_02181_DS_=0x52d
+main.o:_02155_DS_:
+00000495 fece                MOVR     0x31, ToAcc
+00000496 edcf                XORAR    0x30, ToAcc
+00000497 f2fc                BTRSC    STATUS, Z
+00000498 c355                LGOTO    0x4aa; main.o:_02160_DS_=0x4aa
+00000499 fece                MOVR     0x31, ToAcc
+0000049a ff4f                MOVAR    0x30
+0000049b f2fc                BTRSC    STATUS, Z
+0000049c c35c                LGOTO    0x4a3; main.o:_02157_DS_=0x4a3
+0000049d ff8e                SFUNR    T3CR1
+0000049e ff3b                MOVAR    0x44
+0000049f e43b                BSR      0x44, 0x7
+000004a0 febb                MOVR     0x44, ToAcc
+000004a1 ffae                SFUN     T3CR1
+000004a2 c355                LGOTO    0x4aa; main.o:_02160_DS_=0x4aa
+main.o:_02157_DS_:
+000004a3 ff8e                SFUNR    T3CR1
+000004a4 ff3b                MOVAR    0x44
+000004a5 e03b                BCR      0x44, 0x7
+000004a6 febb                MOVR     0x44, ToAcc
+000004a7 ffae                SFUN     T3CR1
+000004a8 de5e                MOVIA    0xa1
+000004a9 ff7a                MOVAR    PORTA
+main.o:_02160_DS_:
+000004aa d227                LCALL    0x5d8; main.o:_determine_next_chunk=0x5d8
+000004ab ff3b                MOVAR    0x44
+000004ac febb                MOVR     0x44, ToAcc
+000004ad f6fc                BTRSS    STATUS, Z
+000004ae c32f                LGOTO    0x4d0; main.o:_02166_DS_=0x4d0
+000004af deb0                MOVIA    0x4f
+000004b0 ff3a                MOVAR    0x45
+000004b1 fd39                CLRR     0x46
+000004b2 fd38                CLRR     0x47
+000004b3 feba                MOVR     0x45, ToAcc
+000004b4 ff04                MOVAR    0x7b
+000004b5 deff                MOVIA    0x0
+000004b6 ff05                MOVAR    0x7a
+000004b7 d2d1                LCALL    0x52e; main.o:_select_next_stage=0x52e
+000004b8 ff3a                MOVAR    0x45
+000004b9 dbfd                XORIA    0x2
+000004ba f6fc                BTRSS    STATUS, Z
+000004bb c335                LGOTO    0x4ca; main.o:_02162_DS_=0x4ca
+000004bc feb0                MOVR     0x4f, ToAcc
+000004bd ff05                MOVAR    0x7a
+000004be fed1                MOVR     0x2e, ToAcc
+000004bf d7f6                LCALL    0x9; _waveform_model_load_stage=0x9
+000004c0 fed9                MOVR     0x26, ToAcc
+000004c1 ff5d                MOVAR    0x22
+000004c2 fed8                MOVR     0x27, ToAcc
+000004c3 ff5c                MOVAR    0x23
+000004c4 fed7                MOVR     0x28, ToAcc
+000004c5 ff5b                MOVAR    0x24
+000004c6 fed6                MOVR     0x29, ToAcc
+000004c7 ff5a                MOVAR    0x25
+000004c8 defe                MOVIA    0x1
+000004c9 ff3a                MOVAR    0x45
+main.o:_02162_DS_:
+000004ca feba                MOVR     0x45, ToAcc
+000004cb dbfe                XORIA    0x1
+000004cc f6fc                BTRSS    STATUS, Z
+000004cd c32f                LGOTO    0x4d0; main.o:_02166_DS_=0x4d0
+000004ce d227                LCALL    0x5d8; main.o:_determine_next_chunk=0x5d8
+000004cf ff3b                MOVAR    0x44
+main.o:_02166_DS_:
+000004d0 febb                MOVR     0x44, ToAcc
+000004d1 f2fc                BTRSC    STATUS, Z
+000004d2 c2d4                LGOTO    0x52b; main.o:_02179_DS_=0x52b
+000004d3 de7f                MOVIA    0x80
+000004d4 efbb                ANDAR    0x44, ToAcc
+000004d5 ff3a                MOVAR    0x45
+000004d6 feba                MOVR     0x45, ToAcc
+000004d7 deff                MOVIA    0x0
+000004d8 f2fc                BTRSC    STATUS, Z
+000004d9 defe                MOVIA    0x1
+000004da ff39                MOVAR    0x46
+000004db feb9                MOVR     0x46, ToAcc
+000004dc deff                MOVIA    0x0
+000004dd f2fc                BTRSC    STATUS, Z
+000004de defe                MOVIA    0x1
+000004df ff3a                MOVAR    0x45
+000004e0 fd39                CLRR     0x46
+000004e1 f7ba                BTRSS    0x45, 0x0
+000004e2 c31b                LGOTO    0x4e4; main.o:_00001_DS_=0x4e4
+000004e3 fa39                INCR     0x46, ToReg
+main.o:_00001_DS_:
+000004e4 dec0                MOVIA    0x3f
+000004e5 ef3b                ANDAR    0x44, ToReg
+000004e6 feb9                MOVR     0x46, ToAcc
+000004e7 f2fc                BTRSC    STATUS, Z
+000004e8 c2db                LGOTO    0x524; main.o:_02175_DS_=0x524
+000004e9 febb                MOVR     0x44, ToAcc
+000004ea dbfd                XORIA    0x2
+000004eb f6fc                BTRSS    STATUS, Z
+000004ec c2db                LGOTO    0x524; main.o:_02175_DS_=0x524
+000004ed feda                MOVR     0x25, ToAcc
+000004ee eedb                IORAR    0x24, ToAcc
+000004ef f2fc                BTRSC    STATUS, Z
+000004f0 c2e2                LGOTO    0x51d; main.o:_02172_DS_=0x51d
+000004f1 d227                LCALL    0x5d8; main.o:_determine_next_chunk=0x5d8
+000004f2 ff3a                MOVAR    0x45
+000004f3 dec0                MOVIA    0x3f
+000004f4 ef3a                ANDAR    0x45, ToReg
+000004f5 feba                MOVR     0x45, ToAcc
+000004f6 ff38                MOVAR    0x47
+000004f7 fd37                CLRR     0x48
+000004f8 eab7                SWAPR    0x48, ToAcc
+000004f9 dd0f                ANDIA    0xf0
+000004fa ff35                MOVAR    0x4a
+000004fb eab8                SWAPR    0x47, ToAcc
+000004fc ff36                MOVAR    0x49
+000004fd ddf0                ANDIA    0xf
+000004fe ee35                IORAR    0x4a, ToReg
+000004ff ed36                XORAR    0x49, ToReg
+00000500 e3fc                BCR      STATUS, C
+00000501 eb38                RLR      0x47, ToReg
+00000502 eb37                RLR      0x48, ToReg
+00000503 e3fc                BCR      STATUS, C
+00000504 eb38                RLR      0x47, ToReg
+00000505 eb37                RLR      0x48, ToReg
+00000506 feb8                MOVR     0x47, ToAcc
+00000507 fc36                ADDAR    0x49, ToReg
+00000508 feb7                MOVR     0x48, ToAcc
+00000509 cb35                ADCAR    0x4a, ToReg
+0000050a de00                MOVIA    0xff
+0000050b fc36                ADDAR    0x49, ToReg
+0000050c de00                MOVIA    0xff
+0000050d cb35                ADCAR    0x4a, ToReg
+0000050e fd38                CLRR     0x47
+0000050f f735                BTRSS    0x4a, 0x1
+00000510 c2ec                LGOTO    0x513; main.o:_02168_DS_=0x513
+00000511 de7f                MOVIA    0x80
+00000512 ff38                MOVAR    0x47
+main.o:_02168_DS_:
+00000513 f7b5                BTRSS    0x4a, 0x0
+00000514 c2e9                LGOTO    0x516; main.o:_02170_DS_=0x516
+00000515 e4b8                BSR      0x47, 0x6
+main.o:_02170_DS_:
+00000516 feb8                MOVR     0x47, ToAcc
+00000517 ff4b                MOVAR    0x34
+00000518 feb6                MOVR     0x49, ToAcc
+00000519 ff4a                MOVAR    0x35
+0000051a feba                MOVR     0x45, ToAcc
+0000051b ff4c                MOVAR    0x33
+0000051c c2e1                LGOTO    0x51e; main.o:_02173_DS_=0x51e
+main.o:_02172_DS_:
+0000051d fd4c                CLRR     0x33
+main.o:_02173_DS_:
+0000051e defe                MOVIA    0x1
+0000051f ff4e                MOVAR    0x31
+00000520 ff4d                MOVAR    0x32
+00000521 defd                MOVIA    0x2
+00000522 d13d                LCALL    0x6c2; main.o:_timer2_queue_interval=0x6c2
+00000523 c2d2                LGOTO    0x52d; main.o:_02181_DS_=0x52d
+main.o:_02175_DS_:
+00000524 feb9                MOVR     0x46, ToAcc
+00000525 ff4e                MOVAR    0x31
+00000526 defe                MOVIA    0x1
+00000527 ff4d                MOVAR    0x32
+00000528 febb                MOVR     0x44, ToAcc
+00000529 d13d                LCALL    0x6c2; main.o:_timer2_queue_interval=0x6c2
+0000052a c2d2                LGOTO    0x52d; main.o:_02181_DS_=0x52d
+main.o:_02179_DS_:
+0000052b fd4d                CLRR     0x32
+0000052c fd4c                CLRR     0x33
+main.o:_02181_DS_:
+0000052d ffef                RET
+main.o:_select_next_stage:
+0000052e ff45                MOVAR    0x3a
+0000052f fe85                MOVR     0x7a, ToAcc
+00000530 ff44                MOVAR    0x3b
+00000531 fe84                MOVR     0x7b, ToAcc
+00000532 ff43                MOVAR    0x3c
+00000533 fed2                MOVR     0x2d, ToAcc
+00000534 ff42                MOVAR    0x3d
+00000535 f6fc                BTRSS    STATUS, Z
+00000536 c2b0                LGOTO    0x54f; main.o:_02052_DS_=0x54f
+00000537 fed0                MOVR     0x2f, ToAcc
+00000538 f6fc                BTRSS    STATUS, Z
+00000539 c2c3                LGOTO    0x53c; main.o:_02046_DS_=0x53c
+0000053a deff                MOVIA    0x0
+0000053b c24e                LGOTO    0x5b1; main.o:_02079_DS_=0x5b1
+main.o:_02046_DS_:
+0000053c fed0                MOVR     0x2f, ToAcc
+0000053d fbc9                SUBAR    0x36, ToAcc
+0000053e f3fc                BTRSC    STATUS, C
+0000053f fd49                CLRR     0x36
+00000540 fec9                MOVR     0x36, ToAcc
+00000541 ff03                MOVAR    0x7c
+00000542 fec3                MOVR     0x3c, ToAcc
+00000543 ff04                MOVAR    0x7b
+00000544 fec4                MOVR     0x3b, ToAcc
+00000545 ff05                MOVAR    0x7a
+00000546 fec5                MOVR     0x3a, ToAcc
+00000547 d052                LCALL    0x7ad; __gptrput=0x7ad
+00000548 fa49                INCR     0x36, ToReg
+00000549 fed0                MOVR     0x2f, ToAcc
+0000054a fbc9                SUBAR    0x36, ToAcc
+0000054b f3fc                BTRSC    STATUS, C
+0000054c fd49                CLRR     0x36
+0000054d defd                MOVIA    0x2
+0000054e c24e                LGOTO    0x5b1; main.o:_02079_DS_=0x5b1
+main.o:_02052_DS_:
+0000054f fec2                MOVR     0x3d, ToAcc
+00000550 dbfb                XORIA    0x4
+00000551 f6fc                BTRSS    STATUS, Z
+00000552 c29b                LGOTO    0x564; main.o:_02057_DS_=0x564
+00000553 fed0                MOVR     0x2f, ToAcc
+00000554 fbc9                SUBAR    0x36, ToAcc
+00000555 f3fc                BTRSC    STATUS, C
+00000556 c29d                LGOTO    0x562; main.o:_02054_DS_=0x562
+00000557 fec9                MOVR     0x36, ToAcc
+00000558 ff03                MOVAR    0x7c
+00000559 fec3                MOVR     0x3c, ToAcc
+0000055a ff04                MOVAR    0x7b
+0000055b fec4                MOVR     0x3b, ToAcc
+0000055c ff05                MOVAR    0x7a
+0000055d fec5                MOVR     0x3a, ToAcc
+0000055e d052                LCALL    0x7ad; __gptrput=0x7ad
+0000055f fa49                INCR     0x36, ToReg
+00000560 defd                MOVIA    0x2
+00000561 c24e                LGOTO    0x5b1; main.o:_02079_DS_=0x5b1
+main.o:_02054_DS_:
+00000562 deff                MOVIA    0x0
+00000563 c24e                LGOTO    0x5b1; main.o:_02079_DS_=0x5b1
+main.o:_02057_DS_:
+00000564 fec2                MOVR     0x3d, ToAcc
+00000565 dbfc                XORIA    0x3
+00000566 f6fc                BTRSS    STATUS, Z
+00000567 c24f                LGOTO    0x5b0; main.o:_02078_DS_=0x5b0
+00000568 fd43                CLRR     0x3c
+00000569 fec8                MOVR     0x37, ToAcc
+0000056a f6fc                BTRSS    STATUS, Z
+0000056b c280                LGOTO    0x57f; main.o:_02072_DS_=0x57f
+0000056c fec6                MOVR     0x39, ToAcc
+0000056d ff05                MOVAR    0x7a
+0000056e deff                MOVIA    0x0
+0000056f d4ad                LCALL    0x352; _waveform_model_load_c10_stage=0x352
+00000570 ff43                MOVAR    0x3c
+00000571 fa46                INCR     0x39, ToReg
+00000572 dee5                MOVIA    0x1a
+00000573 fbc6                SUBAR    0x39, ToAcc
+00000574 f7fc                BTRSS    STATUS, C
+00000575 c25e                LGOTO    0x5a1; main.o:_02073_DS_=0x5a1
+00000576 fd46                CLRR     0x39
+00000577 fa47                INCR     0x38, ToReg
+00000578 def6                MOVIA    0x9
+00000579 fbc7                SUBAR    0x38, ToAcc
+0000057a f7fc                BTRSS    STATUS, C
+0000057b c25e                LGOTO    0x5a1; main.o:_02073_DS_=0x5a1
+0000057c defe                MOVIA    0x1
+0000057d ff48                MOVAR    0x37
+0000057e c25e                LGOTO    0x5a1; main.o:_02073_DS_=0x5a1
+main.o:_02072_DS_:
+0000057f fec8                MOVR     0x37, ToAcc
+00000580 dbfe                XORIA    0x1
+00000581 f6fc                BTRSS    STATUS, Z
+00000582 c26e                LGOTO    0x591; main.o:_02069_DS_=0x591
+00000583 fec6                MOVR     0x39, ToAcc
+00000584 ff05                MOVAR    0x7a
+00000585 defe                MOVIA    0x1
+00000586 d4ad                LCALL    0x352; _waveform_model_load_c10_stage=0x352
+00000587 ff43                MOVAR    0x3c
+00000588 fa46                INCR     0x39, ToReg
+00000589 def1                MOVIA    0xe
+0000058a fbc6                SUBAR    0x39, ToAcc
+0000058b f7fc                BTRSS    STATUS, C
+0000058c c25e                LGOTO    0x5a1; main.o:_02073_DS_=0x5a1
+0000058d defd                MOVIA    0x2
+0000058e ff48                MOVAR    0x37
+0000058f fd46                CLRR     0x39
+00000590 c25e                LGOTO    0x5a1; main.o:_02073_DS_=0x5a1
+main.o:_02069_DS_:
+00000591 fec8                MOVR     0x37, ToAcc
+00000592 dbfd                XORIA    0x2
+00000593 f6fc                BTRSS    STATUS, Z
+00000594 c25e                LGOTO    0x5a1; main.o:_02073_DS_=0x5a1
+00000595 fec6                MOVR     0x39, ToAcc
+00000596 ff05                MOVAR    0x7a
+00000597 defd                MOVIA    0x2
+00000598 d4ad                LCALL    0x352; _waveform_model_load_c10_stage=0x352
+00000599 ff43                MOVAR    0x3c
+0000059a fa46                INCR     0x39, ToReg
+0000059b def8                MOVIA    0x7
+0000059c fbc6                SUBAR    0x39, ToAcc
+0000059d f7fc                BTRSS    STATUS, C
+0000059e c25e                LGOTO    0x5a1; main.o:_02073_DS_=0x5a1
+0000059f defc                MOVIA    0x3
+000005a0 ff48                MOVAR    0x37
+main.o:_02073_DS_:
+000005a1 fec3                MOVR     0x3c, ToAcc
+000005a2 f2fc                BTRSC    STATUS, Z
+000005a3 c251                LGOTO    0x5ae; main.o:_02075_DS_=0x5ae
+000005a4 fed9                MOVR     0x26, ToAcc
+000005a5 ff5d                MOVAR    0x22
+000005a6 fed8                MOVR     0x27, ToAcc
+000005a7 ff5c                MOVAR    0x23
+000005a8 fed7                MOVR     0x28, ToAcc
+000005a9 ff5b                MOVAR    0x24
+000005aa fed6                MOVR     0x29, ToAcc
+000005ab ff5a                MOVAR    0x25
+000005ac defe                MOVIA    0x1
+000005ad c24e                LGOTO    0x5b1; main.o:_02079_DS_=0x5b1
+main.o:_02075_DS_:
+000005ae deff                MOVIA    0x0
+000005af c24e                LGOTO    0x5b1; main.o:_02079_DS_=0x5b1
+main.o:_02078_DS_:
+000005b0 deff                MOVIA    0x0
+main.o:_02079_DS_:
+000005b1 ffef                RET
+main.o:_pwm3_set_enabled:
+000005b2 ff45                MOVAR    0x3a
+000005b3 fec5                MOVR     0x3a, ToAcc
+000005b4 f2fc                BTRSC    STATUS, Z
+000005b5 c243                LGOTO    0x5bc; main.o:_02018_DS_=0x5bc
+000005b6 ff8e                SFUNR    T3CR1
+000005b7 ff45                MOVAR    0x3a
+000005b8 e445                BSR      0x3a, 0x7
+000005b9 fec5                MOVR     0x3a, ToAcc
+000005ba ffae                SFUN     T3CR1
+000005bb c23c                LGOTO    0x5c3; main.o:_02020_DS_=0x5c3
+main.o:_02018_DS_:
+000005bc ff8e                SFUNR    T3CR1
+000005bd ff45                MOVAR    0x3a
+000005be e045                BCR      0x3a, 0x7
+000005bf fec5                MOVR     0x3a, ToAcc
+000005c0 ffae                SFUN     T3CR1
+000005c1 de5e                MOVIA    0xa1
+000005c2 ff7a                MOVAR    PORTA
+main.o:_02020_DS_:
+000005c3 ffef                RET
+waveform_perfect_model_gemini.o:_c_shape_c8_a:
+000005c4 dfff                RETIA    0x0
+000005c5 dfff                RETIA    0x0
+000005c6 dfff                RETIA    0x0
+000005c7 dfff                RETIA    0x0
+000005c8 df3f                RETIA    0xc0
+000005c9 dfd7                RETIA    0x28
+000005ca dfbf                RETIA    0x40
+000005cb dfbf                RETIA    0x40
+000005cc dfef                RETIA    0x10
+000005cd df7f                RETIA    0x80
+000005ce dfe5                RETIA    0x1a
+000005cf dfba                RETIA    0x45
+000005d0 dffe                RETIA    0x1
+000005d1 dfff                RETIA    0x0
+000005d2 dfff                RETIA    0x0
+000005d3 dfff                RETIA    0x0
+000005d4 df5b                RETIA    0xa4
+000005d5 dfed                RETIA    0x12
+000005d6 dfea                RETIA    0x15
+000005d7 dfff                RETIA    0x0
+main.o:_determine_next_chunk:
+000005d8 fedc                MOVR     0x23, ToAcc
+000005d9 eedd                IORAR    0x22, ToAcc
+000005da f2fc                BTRSC    STATUS, Z
+000005db c21e                LGOTO    0x5e1; main.o:_02088_DS_=0x5e1
+000005dc fedd                MOVR     0x22, ToAcc
+000005dd ff45                MOVAR    0x3a
+000005de fedc                MOVR     0x23, ToAcc
+000005df ff44                MOVAR    0x3b
+000005e0 c213                LGOTO    0x5ec; main.o:_02089_DS_=0x5ec
+main.o:_02088_DS_:
+000005e1 feda                MOVR     0x25, ToAcc
+000005e2 eedb                IORAR    0x24, ToAcc
+000005e3 f2fc                BTRSC    STATUS, Z
+000005e4 c215                LGOTO    0x5ea; main.o:_02085_DS_=0x5ea
+000005e5 fedb                MOVR     0x24, ToAcc
+000005e6 ff45                MOVAR    0x3a
+000005e7 feda                MOVR     0x25, ToAcc
+000005e8 ff44                MOVAR    0x3b
+000005e9 c213                LGOTO    0x5ec; main.o:_02089_DS_=0x5ec
+main.o:_02085_DS_:
+000005ea deff                MOVIA    0x0
+000005eb c1d3                LGOTO    0x62c; main.o:_02101_DS_=0x62c
+main.o:_02089_DS_:
+000005ec decc                MOVIA    0x33
+000005ed fbc5                SUBAR    0x3a, ToAcc
+000005ee deff                MOVIA    0x0
+000005ef cac4                SBCAR    0x3b, ToAcc
+000005f0 f3fc                BTRSC    STATUS, C
+000005f1 c20a                LGOTO    0x5f5; main.o:_02097_DS_=0x5f5
+000005f2 fec5                MOVR     0x3a, ToAcc
+000005f3 ff43                MOVAR    0x3c
+000005f4 c1ef                LGOTO    0x610; main.o:_02098_DS_=0x610
+main.o:_02097_DS_:
+000005f5 deb4                MOVIA    0x4b
+000005f6 fbc5                SUBAR    0x3a, ToAcc
+000005f7 deff                MOVIA    0x0
+000005f8 cac4                SBCAR    0x3b, ToAcc
+000005f9 f3fc                BTRSC    STATUS, C
+000005fa c1fd                LGOTO    0x602; main.o:_02094_DS_=0x602
+000005fb e3fc                BCR      STATUS, C
+000005fc ecc4                RRR      0x3b, ToAcc
+000005fd ff42                MOVAR    0x3d
+000005fe ecc5                RRR      0x3a, ToAcc
+000005ff ff41                MOVAR    0x3e
+00000600 ff43                MOVAR    0x3c
+00000601 c1ef                LGOTO    0x610; main.o:_02098_DS_=0x610
+main.o:_02094_DS_:
+00000602 de9a                MOVIA    0x65
+00000603 fbc5                SUBAR    0x3a, ToAcc
+00000604 deff                MOVIA    0x0
+00000605 cac4                SBCAR    0x3b, ToAcc
+00000606 f3fc                BTRSC    STATUS, C
+00000607 c1f1                LGOTO    0x60e; main.o:_02091_DS_=0x60e
+00000608 fec5                MOVR     0x3a, ToAcc
+00000609 ff41                MOVAR    0x3e
+0000060a de31                MOVIA    0xce
+0000060b fcc1                ADDAR    0x3e, ToAcc
+0000060c ff43                MOVAR    0x3c
+0000060d c1ef                LGOTO    0x610; main.o:_02098_DS_=0x610
+main.o:_02091_DS_:
+0000060e decd                MOVIA    0x32
+0000060f ff43                MOVAR    0x3c
+main.o:_02098_DS_:
+00000610 fedc                MOVR     0x23, ToAcc
+00000611 eedd                IORAR    0x22, ToAcc
+00000612 f2fc                BTRSC    STATUS, Z
+00000613 c1de                LGOTO    0x621; main.o:_02100_DS_=0x621
+00000614 fec3                MOVR     0x3c, ToAcc
+00000615 fd44                CLRR     0x3b
+00000616 deff                MOVIA    0x0
+00000617 ff42                MOVAR    0x3d
+00000618 fec3                MOVR     0x3c, ToAcc
+00000619 ff41                MOVAR    0x3e
+0000061a fb5d                SUBAR    0x22, ToReg
+0000061b fec2                MOVR     0x3d, ToAcc
+0000061c ca5c                SBCAR    0x23, ToReg
+0000061d de7f                MOVIA    0x80
+0000061e eec3                IORAR    0x3c, ToAcc
+0000061f ff45                MOVAR    0x3a
+00000620 c1d3                LGOTO    0x62c; main.o:_02101_DS_=0x62c
+main.o:_02100_DS_:
+00000621 fec3                MOVR     0x3c, ToAcc
+00000622 ff45                MOVAR    0x3a
+00000623 fd44                CLRR     0x3b
+00000624 deff                MOVIA    0x0
+00000625 ff42                MOVAR    0x3d
+00000626 fec3                MOVR     0x3c, ToAcc
+00000627 ff41                MOVAR    0x3e
+00000628 fb5b                SUBAR    0x24, ToReg
+00000629 fec2                MOVR     0x3d, ToAcc
+0000062a ca5a                SBCAR    0x25, ToReg
+0000062b fec3                MOVR     0x3c, ToAcc
+main.o:_02101_DS_:
+0000062c ffef                RET
+_main:
+0000062d ffec                DISI
+0000062e de77                MOVIA    0x88
+0000062f ff77                MOVAR    PCON
+main.o:_gpio_init:
+00000630 de01                MOVIA    0xfe
+00000631 fff6                IOST     APHCON
+00000632 deef                MOVIA    0x10
+00000633 fffa                IOST     IOSTA
+00000634 de5e                MOVIA    0xa1
+00000635 ff7a                MOVAR    PORTA
+00000636 def7                MOVIA    0x8
+00000637 fff9                IOST     IOSTB
+00000638 ff79                MOVAR    PORTB
+00000639 e7fa                BSR      PORTA, PA0
+main.o:_legacy_peripherals_disable:
+0000063a fdff                CLRA
+0000063b fff0                IOST     PCON1
+0000063c fd6f                CLRR     ADMD
+0000063d e0ee                BCR      ADR, ADIE
+0000063e e06e                BCR      ADR, ADIF
+main.o:_pwm3_init:
+0000063f fd63                CLRR     TM3RH
+00000640 deb0                MOVIA    0x4f
+00000641 ffaf                SFUN     TMR3
+00000642 dee6                MOVIA    0x19
+00000643 ffac                SFUN     PWM3DUTY
+00000644 def7                MOVIA    0x8
+00000645 ffad                SFUN     T3CR2
+00000646 defc                MOVIA    0x3
+00000647 ffae                SFUN     T3CR1
+00000648 de5e                MOVIA    0xa1
+00000649 ff7a                MOVAR    PORTA
+main.o:_timer1_init:
+0000064a decf                MOVIA    0x30
+0000064b ff66                MOVAR    TMRH
+0000064c def2                MOVIA    0xd
+0000064d ffbf                SFUN     TMR1
+0000064e de08                MOVIA    0xf7
+0000064f ff70                MOVAR    INTF
+00000650 def9                MOVIA    0x6
+00000651 ffbd                SFUN     T1CR2
+00000652 defc                MOVIA    0x3
+00000653 ffbe                SFUN     T1CR1
+main.o:_timer2_init:
+00000654 fdff                CLRA
+00000655 ffb5                SFUN     T2CR1
+00000656 defe                MOVIA    0x1
+00000657 ffb4                SFUN     T2CR2
+00000658 de20                MOVIA    0xdf
+00000659 ff70                MOVAR    INTF
+main.o:_interrupt_init:
+0000065a fd70                CLRR     INTF
+0000065b de97                MOVIA    0x68
+0000065c ff71                MOVAR    INTE
+0000065d defe                MOVIA    0x1
+0000065e ff53                MOVAR    0x2c
+0000065f fd55                CLRR     0x2a
+00000660 fd54                CLRR     0x2b
+00000661 deff                MOVIA    0x0
+00000662 d5c3                LCALL    0x23c; main.o:_load_playlist_entry=0x23c
+00000663 fffb                ENI
+main.o:_02280_DS_:
+00000664 fffd                CLRWDT
+00000665 fed4                MOVR     0x2b, ToAcc
+00000666 f2fc                BTRSC    STATUS, Z
+00000667 c19b                LGOTO    0x664; main.o:_02280_DS_=0x664
+00000668 ffec                DISI
+00000669 fed4                MOVR     0x2b, ToAcc
+0000066a f2fc                BTRSC    STATUS, Z
+0000066b c17f                LGOTO    0x680; main.o:_02276_DS_=0x680
+0000066c fd54                CLRR     0x2b
+0000066d fed5                MOVR     0x2a, ToAcc
+0000066e ff32                MOVAR    0x4d
+0000066f fab2                INCR     0x4d, ToAcc
+00000670 ff55                MOVAR    0x2a
+00000671 deeb                MOVIA    0x14
+00000672 fbd5                SUBAR    0x2a, ToAcc
+00000673 f7fc                BTRSS    STATUS, C
+00000674 c181                LGOTO    0x67e; main.o:_02273_DS_=0x67e
+00000675 fd53                CLRR     0x2c
+00000676 deff                MOVIA    0x0
+00000677 d24d                LCALL    0x5b2; main.o:_pwm3_set_enabled=0x5b2
+00000678 fdff                CLRA
+00000679 ffb5                SFUN     T2CR1
+0000067a de20                MOVIA    0xdf
+0000067b ff70                MOVAR    INTF
+0000067c fd4c                CLRR     0x33
+0000067d c17f                LGOTO    0x680; main.o:_02276_DS_=0x680
+main.o:_02273_DS_:
+0000067e fed5                MOVR     0x2a, ToAcc
+0000067f d5c3                LCALL    0x23c; main.o:_load_playlist_entry=0x23c
+main.o:_02276_DS_:
+00000680 fffb                ENI
+00000681 c19b                LGOTO    0x664; main.o:_02280_DS_=0x664
+00000682 ffef                RET
+_isr:
+main.o:__sdcc_interrupt:
+00000683 ff02                MOVAR    0x7d
+00000684 eafc                SWAPR    STATUS, ToAcc
+00000685 fd7c                CLRR     STATUS
+00000686 ff01                MOVAR    0x7e
+00000687 fef5                MOVR     PCHBUF, ToAcc
+00000688 fd75                CLRR     PCHBUF
+00000689 ff00                MOVAR    0x7f
+0000068a fefb                MOVR     FSR, ToAcc
+0000068b ff2f                MOVAR    0x50
+0000068c fe85                MOVR     0x7a, ToAcc
+0000068d ff2e                MOVAR    0x51
+0000068e fe84                MOVR     0x7b, ToAcc
+0000068f ff2d                MOVAR    0x52
+00000690 f170                BTRSC    INTF, T2IF
+00000691 d3a0                LCALL    0x45f; main.o:_service_timer2_underflow=0x45f
+00000692 f670                BTRSS    INTF, T1IF
+00000693 c152                LGOTO    0x6ad; main.o:_02262_DS_=0x6ad
+00000694 de08                MOVIA    0xf7
+00000695 ff70                MOVAR    INTF
+00000696 fed3                MOVR     0x2c, ToAcc
+00000697 f2fc                BTRSC    STATUS, Z
+00000698 c152                LGOTO    0x6ad; main.o:_02262_DS_=0x6ad
+00000699 fede                MOVR     0x21, ToAcc
+0000069a eedf                IORAR    0x20, ToAcc
+0000069b f2fc                BTRSC    STATUS, Z
+0000069c c152                LGOTO    0x6ad; main.o:_02262_DS_=0x6ad
+0000069d fedf                MOVR     0x20, ToAcc
+0000069e ff34                MOVAR    0x4b
+0000069f fede                MOVR     0x21, ToAcc
+000006a0 ff33                MOVAR    0x4c
+000006a1 de00                MOVIA    0xff
+000006a2 fcb4                ADDAR    0x4b, ToAcc
+000006a3 ff5f                MOVAR    0x20
+000006a4 de00                MOVIA    0xff
+000006a5 cbb3                ADCAR    0x4c, ToAcc
+000006a6 ff5e                MOVAR    0x21
+000006a7 fede                MOVR     0x21, ToAcc
+000006a8 eedf                IORAR    0x20, ToAcc
+000006a9 f6fc                BTRSS    STATUS, Z
+000006aa c152                LGOTO    0x6ad; main.o:_02262_DS_=0x6ad
+000006ab defe                MOVIA    0x1
+000006ac ff54                MOVAR    0x2b
+main.o:_02262_DS_:
+000006ad f4f0                BTRSS    INTF, WDTIF
+000006ae c14e                LGOTO    0x6b1; main.o:_02264_DS_=0x6b1
+000006af de40                MOVIA    0xbf
+000006b0 ff70                MOVAR    INTF
+main.o:_02264_DS_:
+000006b1 f570                BTRSS    INTF, T2IF
+000006b2 c14b                LGOTO    0x6b4; main.o:_02267_DS_=0x6b4
+000006b3 d3a0                LCALL    0x45f; main.o:_service_timer2_underflow=0x45f
+main.o:_02267_DS_:
+000006b4 fead                MOVR     0x52, ToAcc
+000006b5 ff04                MOVAR    0x7b
+000006b6 feae                MOVR     0x51, ToAcc
+000006b7 ff05                MOVAR    0x7a
+000006b8 feaf                MOVR     0x50, ToAcc
+000006b9 ff7b                MOVAR    FSR
+000006ba fe80                MOVR     0x7f, ToAcc
+000006bb ff75                MOVAR    PCHBUF
+000006bc fd7c                CLRR     STATUS
+000006bd ea81                SWAPR    0x7e, ToAcc
+000006be ff7c                MOVAR    STATUS
+000006bf ea02                SWAPR    0x7d, ToReg
+000006c0 ea82                SWAPR    0x7d, ToAcc
+main.o:END_OF_INTERRUPT:
+000006c1 ffee                RETIE
+main.o:_timer2_queue_interval:
+000006c2 ff44                MOVAR    0x3b
+000006c3 fd43                CLRR     0x3c
+000006c4 eac3                SWAPR    0x3c, ToAcc
+000006c5 dd0f                ANDIA    0xf0
+000006c6 ff42                MOVAR    0x3d
+000006c7 eac4                SWAPR    0x3b, ToAcc
+000006c8 ff45                MOVAR    0x3a
+000006c9 ddf0                ANDIA    0xf
+000006ca ee42                IORAR    0x3d, ToReg
+000006cb ed45                XORAR    0x3a, ToReg
+000006cc e3fc                BCR      STATUS, C
+000006cd eb44                RLR      0x3b, ToReg
+000006ce eb43                RLR      0x3c, ToReg
+000006cf e3fc                BCR      STATUS, C
+000006d0 eb44                RLR      0x3b, ToReg
+000006d1 eb43                RLR      0x3c, ToReg
+000006d2 fec4                MOVR     0x3b, ToAcc
+000006d3 fc45                ADDAR    0x3a, ToReg
+000006d4 fec3                MOVR     0x3c, ToAcc
+000006d5 cb42                ADCAR    0x3d, ToReg
+000006d6 de00                MOVIA    0xff
+000006d7 fc45                ADDAR    0x3a, ToReg
+000006d8 de00                MOVIA    0xff
+000006d9 cb42                ADCAR    0x3d, ToReg
+000006da fd44                CLRR     0x3b
+000006db f742                BTRSS    0x3d, 0x1
+000006dc c120                LGOTO    0x6df; main.o:_02038_DS_=0x6df
+000006dd de7f                MOVIA    0x80
+000006de ff44                MOVAR    0x3b
+main.o:_02038_DS_:
+000006df f7c2                BTRSS    0x3d, 0x0
+000006e0 c11d                LGOTO    0x6e2; main.o:_02040_DS_=0x6e2
+000006e1 e4c4                BSR      0x3b, 0x6
+main.o:_02040_DS_:
+000006e2 fec4                MOVR     0x3b, ToAcc
+000006e3 ff66                MOVAR    TMRH
+000006e4 fec5                MOVR     0x3a, ToAcc
+000006e5 ff44                MOVAR    0x3b
+000006e6 ffb6                SFUN     TMR2
+000006e7 ffef                RET
+main.o:_c_playlist:
+000006e8 dfe6                RETIA    0x19
+000006e9 dfd1                RETIA    0x2e
+000006ea dfa7                RETIA    0x58
+000006eb dfe6                RETIA    0x19
+000006ec dfd0                RETIA    0x2f
+000006ed dff8                RETIA    0x7
+000006ee dff5                RETIA    0xa
+000006ef dfff                RETIA    0x0
+000006f0 dfbf                RETIA    0x40
+000006f1 dfe6                RETIA    0x19
+000006f2 dffe                RETIA    0x1
+000006f3 dfc0                RETIA    0x3f
+000006f4 dfe6                RETIA    0x19
+000006f5 df5f                RETIA    0xa0
+000006f6 dfff                RETIA    0x0
+000006f7 dff9                RETIA    0x6
+000006f8 dffd                RETIA    0x2
+000006f9 dfce                RETIA    0x31
+000006fa dfe6                RETIA    0x19
+000006fb dffc                RETIA    0x3
+000006fc dfc3                RETIA    0x3c
+000006fd dfe6                RETIA    0x19
+000006fe dffb                RETIA    0x4
+000006ff dfc0                RETIA    0x3f
+00000700 dfe6                RETIA    0x19
+00000701 dffa                RETIA    0x5
+00000702 dfd4                RETIA    0x2b
+00000703 dfe6                RETIA    0x19
+00000704 dff9                RETIA    0x6
+00000705 dfc0                RETIA    0x3f
+00000706 dfe6                RETIA    0x19
+00000707 dff8                RETIA    0x7
+00000708 dfc0                RETIA    0x3f
+00000709 dffa                RETIA    0x5
+0000070a df7f                RETIA    0x80
+0000070b dfff                RETIA    0x0
+0000070c dffa                RETIA    0x5
+0000070d dff7                RETIA    0x8
+0000070e dfb2                RETIA    0x4d
+0000070f dfff                RETIA    0x0
+00000710 dfb6                RETIA    0x49
+00000711 dfcb                RETIA    0x34
+00000712 dff5                RETIA    0xa
+00000713 dff5                RETIA    0xa
+00000714 dfd6                RETIA    0x29
+00000715 dfff                RETIA    0x0
+00000716 dfb4                RETIA    0x4b
+00000717 dfba                RETIA    0x45
+00000718 dfe6                RETIA    0x19
+00000719 dff3                RETIA    0xc
+0000071a dfd5                RETIA    0x2a
+0000071b dff5                RETIA    0xa
+0000071c df7f                RETIA    0x80
+0000071d dfff                RETIA    0x0
+0000071e dfe6                RETIA    0x19
+0000071f df1f                RETIA    0xe0
+00000720 dfff                RETIA    0x0
+00000721 dfe6                RETIA    0x19
+00000722 dff2                RETIA    0xd
+00000723 dfc8                RETIA    0x37
+waveform_perfect_model_gemini.o:_c_shape_c9_main_init:
+00000724 dfff                RETIA    0x0
+00000725 dfff                RETIA    0x0
+00000726 dfff                RETIA    0x0
+00000727 dfff                RETIA    0x0
+00000728 dfff                RETIA    0x0
+00000729 dfff                RETIA    0x0
+0000072a df5c                RETIA    0xa3
+0000072b dfaf                RETIA    0x50
+0000072c dfd6                RETIA    0x29
+0000072d dfff                RETIA    0x0
+0000072e dfef                RETIA    0x10
+0000072f dfff                RETIA    0x0
+00000730 dfff                RETIA    0x0
+00000731 df9b                RETIA    0x64
+00000732 dfff                RETIA    0x0
+00000733 dffe                RETIA    0x1
+00000734 dffa                RETIA    0x5
+00000735 dfff                RETIA    0x0
+waveform_perfect_model_gemini.o:_c_shape_p0:
+00000736 dfff                RETIA    0x0
+00000737 dfff                RETIA    0x0
+00000738 dfff                RETIA    0x0
+00000739 dfff                RETIA    0x0
+0000073a df3f                RETIA    0xc0
+0000073b dfd7                RETIA    0x28
+0000073c dfab                RETIA    0x54
+0000073d dff5                RETIA    0xa
+0000073e dfff                RETIA    0x0
+0000073f dffb                RETIA    0x4
+00000740 dfff                RETIA    0x0
+00000741 dfff                RETIA    0x0
+00000742 dfe6                RETIA    0x19
+00000743 dfff                RETIA    0x0
+00000744 dfae                RETIA    0x51
+00000745 dffe                RETIA    0x1
+waveform_perfect_model_gemini.o:_c_shape_c1_c7:
+00000746 dfff                RETIA    0x0
+00000747 dfff                RETIA    0x0
+00000748 dfff                RETIA    0x0
+00000749 dfff                RETIA    0x0
+0000074a df3f                RETIA    0xc0
+0000074b dfd7                RETIA    0x28
+0000074c dffe                RETIA    0x1
+0000074d dfda                RETIA    0x25
+0000074e dfb7                RETIA    0x48
+0000074f dfbb                RETIA    0x44
+00000750 dfef                RETIA    0x10
+00000751 df9f                RETIA    0x60
+00000752 dfab                RETIA    0x54
+00000753 dfbf                RETIA    0x40
+00000754 df6f                RETIA    0x90
+00000755 dff3                RETIA    0xc
+waveform_perfect_model_gemini.o:_c_shape_c4:
+00000756 dfff                RETIA    0x0
+00000757 dfff                RETIA    0x0
+00000758 dfff                RETIA    0x0
+00000759 dfff                RETIA    0x0
+0000075a df3f                RETIA    0xc0
+0000075b dfd7                RETIA    0x28
+0000075c dfee                RETIA    0x11
+0000075d df5b                RETIA    0xa4
+0000075e dfbf                RETIA    0x40
+0000075f dfaf                RETIA    0x50
+00000760 dffe                RETIA    0x1
+00000761 dfee                RETIA    0x11
+00000762 df7a                RETIA    0x85
+00000763 dffb                RETIA    0x4
+00000764 dfbe                RETIA    0x41
+00000765 dff2                RETIA    0xd
+waveform_perfect_model_gemini.o:_c_shape_c6:
+00000766 dfff                RETIA    0x0
+00000767 dfff                RETIA    0x0
+00000768 dfff                RETIA    0x0
+00000769 dfff                RETIA    0x0
+0000076a df3f                RETIA    0xc0
+0000076b dfd7                RETIA    0x28
+0000076c dffe                RETIA    0x1
+0000076d dfe5                RETIA    0x1a
+0000076e dfbb                RETIA    0x44
+0000076f dfbb                RETIA    0x44
+00000770 dfef                RETIA    0x10
+00000771 df9f                RETIA    0x60
+00000772 dfab                RETIA    0x54
+00000773 dfbf                RETIA    0x40
+00000774 df6f                RETIA    0x90
+00000775 dff3                RETIA    0xc
+waveform_perfect_model_gemini.o:_c_shape_c3_body:
+00000776 dfff                RETIA    0x0
+00000777 dfff                RETIA    0x0
+00000778 dfff                RETIA    0x0
+00000779 dfff                RETIA    0x0
+0000077a df3f                RETIA    0xc0
+0000077b dfd7                RETIA    0x28
+0000077c dfba                RETIA    0x45
+0000077d df5f                RETIA    0xa0
+0000077e dfbf                RETIA    0x40
+0000077f dfab                RETIA    0x54
+00000780 dfbf                RETIA    0x40
+00000781 df6f                RETIA    0x90
+00000782 dfb5                RETIA    0x4a
+00000783 dfef                RETIA    0x10
+00000784 dfdf                RETIA    0x20
+waveform_perfect_model_gemini.o:_c_shape_c11:
+00000785 dfff                RETIA    0x0
+00000786 dfff                RETIA    0x0
+00000787 dfff                RETIA    0x0
+00000788 dfff                RETIA    0x0
+00000789 df3f                RETIA    0xc0
+0000078a df97                RETIA    0x68
+0000078b df95                RETIA    0x6a
+0000078c df56                RETIA    0xa9
+0000078d dfb9                RETIA    0x46
+0000078e dfda                RETIA    0x25
+0000078f dff7                RETIA    0x8
+00000790 df6b                RETIA    0x94
+00000791 df75                RETIA    0x8a
+00000792 dfff                RETIA    0x0
+waveform_perfect_model_gemini.o:_c_shape_c3_prefix:
+00000793 dfff                RETIA    0x0
+00000794 dfff                RETIA    0x0
+00000795 dfff                RETIA    0x0
+00000796 dfff                RETIA    0x0
+00000797 df3f                RETIA    0xc0
+00000798 dfd7                RETIA    0x28
+00000799 df76                RETIA    0x89
+0000079a dfda                RETIA    0x25
+0000079b dff9                RETIA    0x6
+0000079c dfff                RETIA    0x0
+0000079d dfff                RETIA    0x0
+0000079e dfeb                RETIA    0x14
+0000079f dfff                RETIA    0x0
+waveform_perfect_model_gemini.o:_c_shape_c9_preamble_init:
+000007a0 dfff                RETIA    0x0
+000007a1 dfff                RETIA    0x0
+000007a2 dfff                RETIA    0x0
+000007a3 dfff                RETIA    0x0
+000007a4 df5c                RETIA    0xa3
+000007a5 dff6                RETIA    0x9
+000007a6 df7d                RETIA    0x82
+000007a7 dfbb                RETIA    0x44
+000007a8 df7f                RETIA    0x80
+000007a9 dfdf                RETIA    0x20
+000007aa dfff                RETIA    0x0
+000007ab dffe                RETIA    0x1
+000007ac df66                RETIA    0x99
+__gptrput:
+__gptrput1:
+000007ad dbff                XORIA    0x0
+000007ae f2fc                BTRSC    STATUS, Z
+000007af c04e                LGOTO    0x7b1; _gptrput1.o:__dataptrput1=0x7b1
+000007b0 ffef                RET
+_gptrput1.o:__dataptrput1:
+000007b1 fe84                MOVR     0x7b, ToAcc
+000007b2 ff7b                MOVAR    FSR
+000007b3 e0fc                BCR      STATUS, BK0
+000007b4 f004                BTRSC    0x7b, 0x7
+000007b5 e4fc                BSR      STATUS, BK0
+000007b6 fe83                MOVR     0x7c, ToAcc
+000007b7 ff7f                MOVAR    INDF
+000007b8 ffef                RET
+waveform_perfect_model_gemini.o:_c_shape_c5:
+000007b9 dfff                RETIA    0x0
+000007ba dfff                RETIA    0x0
+000007bb dfff                RETIA    0x0
+000007bc dfff                RETIA    0x0
+000007bd df3f                RETIA    0xc0
+000007be dfd7                RETIA    0x28
+000007bf df76                RETIA    0x89
+000007c0 dfda                RETIA    0x25
+000007c1 df55                RETIA    0xaa
+000007c2 df7d                RETIA    0x82
+000007c3 dff5                RETIA    0xa
+waveform_perfect_model_gemini.o:_c_shape_c9_preamble:
+000007c4 dfff                RETIA    0x0
+000007c5 df3f                RETIA    0xc0
+000007c6 dfd7                RETIA    0x28
+000007c7 dfff                RETIA    0x0
+000007c8 dfff                RETIA    0x0
+000007c9 dfff                RETIA    0x0
+000007ca df76                RETIA    0x89
+000007cb dffb                RETIA    0x4
+000007cc dfab                RETIA    0x54
+000007cd dfff                RETIA    0x0
+000007ce dfff                RETIA    0x0
+waveform_perfect_model_gemini.o:_c_shape_c9_main:
+000007cf dfff                RETIA    0x0
+000007d0 df3f                RETIA    0xc0
+000007d1 dfd7                RETIA    0x28
+000007d2 dfff                RETIA    0x0
+000007d3 dfff                RETIA    0x0
+000007d4 dfff                RETIA    0x0
+000007d5 dff6                RETIA    0x9
+000007d6 dfff                RETIA    0x0
+000007d7 dfef                RETIA    0x10
+000007d8 dfff                RETIA    0x0
+000007d9 dfff                RETIA    0x0
+waveform_perfect_model_gemini.o:_c_movano_payload:
+000007da dffb                RETIA    0x4
+000007db df43                RETIA    0xbc
+000007dc dfef                RETIA    0x10
+000007dd dfed                RETIA    0x12
+000007de dfbf                RETIA    0x40
+000007df df3f                RETIA    0xc0
+000007e0 df6d                RETIA    0x92
+000007e1 dffe                RETIA    0x1
+000007e2 dfbd                RETIA    0x42
+000007e3 dffc                RETIA    0x3
+__checksum:
+__CHECKSUM_ADDR__:
