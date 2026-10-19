@@ -11,11 +11,11 @@
 Module list:
 ------------
 main.o:
-    .debug_line          offset:0x0        size:0x1af3 (6899)
-    .debug_info          offset:0x0        size:0x6b5 (1717)
+    .debug_line          offset:0x0        size:0x1b50 (6992)
+    .debug_info          offset:0x0        size:0x6d5 (1749)
     .debug_abbrev        offset:0x0        size:0x29 (41)
-    .debug_ranges        offset:0x0        size:0x120 (288)
-    .debug_aranges       offset:0x0        size:0x128 (296)
+    .debug_ranges        offset:0x0        size:0x124 (292)
+    .debug_aranges       offset:0x0        size:0x12c (300)
     share_bank           offset:0x2000007f size:0x1
     share_bank           offset:0x2000007e size:0x1
     share_bank           offset:0x2000007d size:0x1
@@ -66,27 +66,27 @@ main.o:
     uninit               offset:0x20000050 size:0x1
     uninit               offset:0x20000051 size:0x1
     uninit               offset:0x20000052 size:0x1
-    code                 offset:0x971      size:0x3c (60)
+    uninit               offset:0x20000053 size:0x1
+    code                 offset:0x985      size:0x3c (60)
     .text                offset:0x0        size:0x1
     .text                offset:0x8        size:0x1
-    code                 offset:0x8e3      size:0x4f (79)
-    code                 offset:0x882      size:0x61 (97)
-    code                 offset:0x5e9      size:0x128 (296)
+    code                 offset:0x8e5      size:0x61 (97)
+    code                 offset:0x882      size:0x63 (99)
+    code                 offset:0x5e9      size:0x126 (294)
     code                 offset:0x30d      size:0x198 (408)
     code                 offset:0x800      size:0x82 (130)
-    code                 offset:0x711      size:0xb5 (181)
-    code                 offset:0x932      size:0x3f (63)
-    code                 offset:0x7c6      size:0x14 (20)
+    code                 offset:0x70f      size:0xb5 (181)
+    code                 offset:0x946      size:0x3f (63)
+    code                 offset:0x7d8      size:0x13 (19)
 
 waveform_perfect_model_gemini.o:
-    .debug_line          offset:0x1af3     size:0x1563 (5475)
-    .debug_info          offset:0x6b5      size:0x25f (607)
+    .debug_line          offset:0x1b50     size:0x1563 (5475)
+    .debug_info          offset:0x6d5      size:0x25f (607)
     .debug_abbrev        offset:0x29       size:0x29 (41)
-    .debug_ranges        offset:0x120      size:0x88 (136)
-    .debug_aranges       offset:0x128      size:0x90 (144)
+    .debug_ranges        offset:0x124      size:0x88 (136)
+    .debug_aranges       offset:0x12c      size:0x90 (144)
     uninit               offset:0x20000026 size:0x2
     uninit               offset:0x20000028 size:0x2
-    uninit               offset:0x20000053 size:0x1
     uninit               offset:0x20000054 size:0x1
     uninit               offset:0x20000055 size:0x1
     uninit               offset:0x20000056 size:0x1
@@ -101,29 +101,30 @@ waveform_perfect_model_gemini.o:
     uninit               offset:0x2000005f size:0x1
     uninit               offset:0x20000060 size:0x1
     uninit               offset:0x20000061 size:0x1
-    code                 offset:0xa66      size:0xa (10)
-    code                 offset:0x7ee      size:0x10 (16)
-    code                 offset:0x9d2      size:0x10 (16)
-    code                 offset:0xa1f      size:0xd (13)
-    code                 offset:0xa02      size:0xf (15)
-    code                 offset:0x9e2      size:0x10 (16)
-    code                 offset:0xa45      size:0xb (11)
-    code                 offset:0x9f2      size:0x10 (16)
-    code                 offset:0x7da      size:0x14 (20)
-    code                 offset:0xa2c      size:0xd (13)
-    code                 offset:0xa50      size:0xb (11)
-    code                 offset:0x9c0      size:0x12 (18)
-    code                 offset:0xa5b      size:0xb (11)
-    code                 offset:0xa11      size:0xe (14)
+    uninit               offset:0x20000062 size:0x1
+    code                 offset:0xa77      size:0xa (10)
+    code                 offset:0x9d3      size:0x10 (16)
+    code                 offset:0x9e3      size:0x10 (16)
+    code                 offset:0xa30      size:0xd (13)
+    code                 offset:0xa13      size:0xf (15)
+    code                 offset:0x9f3      size:0x10 (16)
+    code                 offset:0xa56      size:0xb (11)
+    code                 offset:0xa03      size:0x10 (16)
+    code                 offset:0x7c4      size:0x14 (20)
+    code                 offset:0xa3d      size:0xd (13)
+    code                 offset:0xa61      size:0xb (11)
+    code                 offset:0x9c1      size:0x12 (18)
+    code                 offset:0xa6c      size:0xb (11)
+    code                 offset:0xa22      size:0xe (14)
     code                 offset:0x4a5      size:0x144 (324)
     code                 offset:0x9        size:0x304 (772)
 
 NY8B062F.a:
-    .debug_line          offset:0x3056     size:0x576 (1398)
-    .debug_info          offset:0x914      size:0x2d (45)
+    .debug_line          offset:0x30b3     size:0x576 (1398)
+    .debug_info          offset:0x934      size:0x2d (45)
     .debug_abbrev        offset:0x52       size:0xf (15)
-    .debug_ranges        offset:0x1a8      size:0x284 (644)
-    .debug_aranges       offset:0x1b8      size:0x28c (652)
+    .debug_ranges        offset:0x1ac      size:0x284 (644)
+    .debug_aranges       offset:0x1bc      size:0x28c (652)
     .text                offset:0x20000000 size:0x1
     .text                offset:0x20000001 size:0x1
     .text                offset:0x20000002 size:0x1
@@ -288,23 +289,23 @@ NY8B062F.a:
 libsdcc_bankram.a:
 
 bank2_8b.a:
-    .debug_line          offset:0x35cc     size:0x4e (78)
-    .debug_info          offset:0x941      size:0x2e (46)
+    .debug_line          offset:0x362a     size:0x4e (78)
+    .debug_info          offset:0x962      size:0x2e (46)
     .debug_abbrev        offset:0x61       size:0xf (15)
-    .debug_ranges        offset:0x42c      size:0x8
-    .debug_aranges       offset:0x444      size:0x10 (16)
-    code                 offset:0x9ad      size:0x13 (19)
-    .debug_line          offset:0x361b     size:0x46 (70)
-    .debug_info          offset:0x96f      size:0x2e (46)
+    .debug_ranges        offset:0x430      size:0x8
+    .debug_aranges       offset:0x448      size:0x10 (16)
+    code                 offset:0x7eb      size:0x13 (19)
+    .debug_line          offset:0x3678     size:0x46 (70)
+    .debug_info          offset:0x990      size:0x2e (46)
     .debug_abbrev        offset:0x71       size:0xf (15)
-    .debug_ranges        offset:0x434      size:0x8
-    .debug_aranges       offset:0x454      size:0x10 (16)
-    code                 offset:0xa39      size:0xc (12)
-    .debug_line          offset:0x3661     size:0x3c (60)
-    .debug_info          offset:0x99d      size:0x2b (43)
+    .debug_ranges        offset:0x438      size:0x8
+    .debug_aranges       offset:0x458      size:0x10 (16)
+    code                 offset:0xa4a      size:0xc (12)
+    .debug_line          offset:0x36be     size:0x3c (60)
+    .debug_info          offset:0x9be      size:0x2b (43)
     .debug_abbrev        offset:0x80       size:0xf (15)
-    .debug_ranges        offset:0x43c      size:0x8
-    .debug_aranges       offset:0x464      size:0x10 (16)
+    .debug_ranges        offset:0x440      size:0x8
+    .debug_aranges       offset:0x468      size:0x10 (16)
     startup              offset:0x1        size:0x2
 
 cb_file:
@@ -406,6 +407,7 @@ uninit               0x2000005e 0x1
 uninit               0x2000005f 0x1
 uninit               0x20000060 0x1
 uninit               0x20000061 0x1
+uninit               0x20000062 0x1
 share_bank           0x2000007a 0x1
 share_bank           0x2000007b 0x1
 share_bank           0x2000007c 0x1
@@ -688,8 +690,8 @@ ___STK12                  no used
 ___uchar2fs               no used
 ___uint2fs                no used
 ___ulong2fs               no used
-__checksum                0x7da (2010)
-__CHECKSUM_ADDR__         0x7da (2010)
+__checksum                0x7e7 (2023)
+__CHECKSUM_ADDR__         0x7e7 (2023)
 __codeptrget1             0x0
 __divschar                no used
 __divsint                 no used
@@ -708,8 +710,8 @@ __gptrget1                0x0
 __gptrget2                no used
 __gptrget3                no used
 __gptrget4                no used
-__gptrput                 0x7a3 (1955)
-__gptrput1                0x7a3 (1955)
+__gptrput                 0x7b0 (1968)
+__gptrput1                0x7b0 (1968)
 __gptrput2                no used
 __gptrput3                no used
 __gptrput4                no used
@@ -735,7 +737,7 @@ __muluchar                no used
 __muluschar               no used
 __nyc_ny8_startup         0x1
 __share_bank_total_size__ 0x6
-__uninit_total_size__     0x42 (66)
+__uninit_total_size__     0x43 (67)
 _ABPLCON                  0x2000000b
 _ABPLCONbits              0x2000000b
 _ADCR                     0x20000014
@@ -779,8 +781,8 @@ _INTFbits                 0x2000000f
 _IOSTA                    0x20800005
 _IOSTB                    0x20800006
 _IRCR                     0x21000006
-_isr                      0x689 (1673)
-_main                     0x633 (1587)
+_isr                      0x677 (1655)
+_main                     0x620 (1568)
 _multi_16b                no used
 _multi_8b                 no used
 _OSCCR                    0x2100000f

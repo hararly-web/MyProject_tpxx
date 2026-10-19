@@ -105,6 +105,7 @@ static uint8_t  s_stage_index;        /**< Stage cursor for REPEAT and ONESHOT m
 static uint8_t  s_c10_phase;          /**< C10 sequence phase: 0: Body, 1: Tail, 2: Special, 3: Done. */
 static uint8_t  s_c10_round;          /**< C10 Body round counter [0..8]. */
 static uint8_t  s_c10_stage;          /**< Stage cursor within active C10 phase. */
+static uint8_t  s_red_blink_ticks;     /**< 10 ms ticks for low-voltage red LED blinking. */
 
 /* Forward declarations */
 static void pwm3_set_enabled(bool enabled);
@@ -121,7 +122,7 @@ static void gpio_init(void)
 {
     APHCON = (uint8_t)~C_PA0_PHB;
     IOSTA = C_PA7_Output | C_PA5_Output | C_PA4_Input | C_PA2_Output | C_PA0_Output;
-    PORTA = (PIN_MASK_PA7_GREEN_LED | PIN_MASK_PA5_RED_LED | PIN_MASK_PA0_POWER_HOLD);
+    PORTA = (PIN_MASK_PA5_RED_LED | PIN_MASK_PA0_POWER_HOLD);
 
     IOSTB = C_PB3_Input;
     PORTB = 0x08U;
@@ -132,7 +133,8 @@ static void gpio_init(void)
  */
 static void legacy_peripherals_disable(void)
 {
-    PCON1 = C_TMR0_Dis;
+    PCONbits.LVDEN = 1;
+    PCON1 = (uint8_t)(C_TMR0_Dis | C_LVD_3P6V);
     ADMD = 0x00U;
     ADRbits.ADIE = 0;
     ADRbits.ADIF = 0;
@@ -148,7 +150,7 @@ static void pwm3_init(void)
     PWM3DUTY = 25U;     /* Default CP2 active cycles */
     T3CR2 = C_PS3_Dis | C_TMR3_ClkSrc_Inst;
     T3CR1 = C_PWM3_Active_Hi | C_TMR3_Reload | C_TMR3_En;
-    PORTA = (PIN_MASK_PA7_GREEN_LED | PIN_MASK_PA5_RED_LED | PIN_MASK_PA0_POWER_HOLD);
+    PORTA &= (uint8_t)~PIN_MASK_PA2_PWM3;
 }
 
 /**
@@ -164,7 +166,7 @@ static void pwm3_set_enabled(bool enabled)
     else
     {
         T3CR1 &= (uint8_t)~C_PWM3_En;
-        PORTA = (PIN_MASK_PA7_GREEN_LED | PIN_MASK_PA5_RED_LED | PIN_MASK_PA0_POWER_HOLD);
+        PORTA &= (uint8_t)~PIN_MASK_PA2_PWM3;
     }
 }
 
@@ -581,7 +583,7 @@ static void service_timer2_underflow(void)
     if (s_has_queued_chunk == 0U)
     {
         T3CR1 &= (uint8_t)~C_PWM3_En;
-        PORTA = (PIN_MASK_PA7_GREEN_LED | PIN_MASK_PA5_RED_LED | PIN_MASK_PA0_POWER_HOLD);
+        PORTA &= (uint8_t)~PIN_MASK_PA2_PWM3;
         T2CR1 = C_TMR2_Dis;
         INTFbits.T2IF = 0;
         s_prep_inactive_steps = 0U;
@@ -604,7 +606,7 @@ static void service_timer2_underflow(void)
         else
         {
             T3CR1 &= (uint8_t)~C_PWM3_En;
-            PORTA = (PIN_MASK_PA7_GREEN_LED | PIN_MASK_PA5_RED_LED | PIN_MASK_PA0_POWER_HOLD);
+            PORTA &= (uint8_t)~PIN_MASK_PA2_PWM3;
         }
     }
 
@@ -703,6 +705,23 @@ void isr(void) __interrupt(0)
                 }
             }
         }
+
+        /* Hardware LVD: LVDOUT=0 when VDD is below the selected 3.6 V threshold.
+         * LEDs are active-low: PA7 green remains on; PA5 red toggles every 250 ms. */
+        if ((PCON1 & 0x40U) == 0U)
+        {
+            s_red_blink_ticks++;
+            if (s_red_blink_ticks >= 25U)
+            {
+                s_red_blink_ticks = 0U;
+                PORTA ^= PIN_MASK_PA5_RED_LED;
+            }
+        }
+        else
+        {
+            s_red_blink_ticks = 0U;
+            PORTA |= PIN_MASK_PA5_RED_LED;
+        }
     }
 
     /* 3. Service Watchdog Timer */
@@ -738,6 +757,7 @@ void main(void)
     s_running = 1U;
     s_entry_index = 0U;
     s_entry_expired = 0U;
+    s_red_blink_ticks = 0U;
     load_playlist_entry(0U);
 
     ENI();
