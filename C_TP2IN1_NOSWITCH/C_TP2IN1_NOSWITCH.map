@@ -11,7 +11,7 @@
 Module list:
 ------------
 main.o:
-    .debug_line          offset:0x0        size:0x1b50 (6992)
+    .debug_line          offset:0x0        size:0x1b4e (6990)
     .debug_info          offset:0x0        size:0x6d5 (1749)
     .debug_abbrev        offset:0x0        size:0x29 (41)
     .debug_ranges        offset:0x0        size:0x124 (292)
@@ -80,7 +80,7 @@ main.o:
     code                 offset:0x7d8      size:0x13 (19)
 
 waveform_perfect_model_gemini.o:
-    .debug_line          offset:0x1b50     size:0x1563 (5475)
+    .debug_line          offset:0x1b4e     size:0x1563 (5475)
     .debug_info          offset:0x6d5      size:0x25f (607)
     .debug_abbrev        offset:0x29       size:0x29 (41)
     .debug_ranges        offset:0x124      size:0x88 (136)
@@ -120,7 +120,7 @@ waveform_perfect_model_gemini.o:
     code                 offset:0x9        size:0x304 (772)
 
 NY8B062F.a:
-    .debug_line          offset:0x30b3     size:0x576 (1398)
+    .debug_line          offset:0x30b1     size:0x576 (1398)
     .debug_info          offset:0x934      size:0x2d (45)
     .debug_abbrev        offset:0x52       size:0xf (15)
     .debug_ranges        offset:0x1ac      size:0x284 (644)
@@ -289,19 +289,19 @@ NY8B062F.a:
 libsdcc_bankram.a:
 
 bank2_8b.a:
-    .debug_line          offset:0x362a     size:0x4e (78)
+    .debug_line          offset:0x3628     size:0x4e (78)
     .debug_info          offset:0x962      size:0x2e (46)
     .debug_abbrev        offset:0x61       size:0xf (15)
     .debug_ranges        offset:0x430      size:0x8
     .debug_aranges       offset:0x448      size:0x10 (16)
     code                 offset:0x7eb      size:0x13 (19)
-    .debug_line          offset:0x3678     size:0x46 (70)
+    .debug_line          offset:0x3676     size:0x46 (70)
     .debug_info          offset:0x990      size:0x2e (46)
     .debug_abbrev        offset:0x71       size:0xf (15)
     .debug_ranges        offset:0x438      size:0x8
     .debug_aranges       offset:0x458      size:0x10 (16)
     code                 offset:0xa4a      size:0xc (12)
-    .debug_line          offset:0x36be     size:0x3c (60)
+    .debug_line          offset:0x36bc     size:0x3c (60)
     .debug_info          offset:0x9be      size:0x2b (43)
     .debug_abbrev        offset:0x80       size:0xf (15)
     .debug_ranges        offset:0x440      size:0x8

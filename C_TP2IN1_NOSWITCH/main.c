@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file main.c
  * @brief Continuous double-buffered waveform scheduler and lifecycle engine for NY8B062F.
  */
@@ -134,7 +134,7 @@ static void gpio_init(void)
 static void legacy_peripherals_disable(void)
 {
     PCONbits.LVDEN = 1;
-    PCON1 = (uint8_t)(C_TMR0_Dis | C_LVD_3P6V);
+    PCON1 = (uint8_t)(C_TMR0_Dis | C_LVD_4P3V);
     ADMD = 0x00U;
     ADRbits.ADIE = 0;
     ADRbits.ADIF = 0;
@@ -746,7 +746,6 @@ void main(void)
     PCON = C_WDT_En | C_LVR_En;
 
     gpio_init();
-    PORTA |= PIN_MASK_PA0_POWER_HOLD;
 
     legacy_peripherals_disable();
     pwm3_init();
@@ -781,6 +780,7 @@ void main(void)
                     T2CR1 = C_TMR2_Dis;
                     INTFbits.T2IF = 0;
                     s_prep_inactive_steps = 0U;
+                    PORTA &= (uint8_t)~PIN_MASK_PA0_POWER_HOLD;
                 }
                 else
                 {
